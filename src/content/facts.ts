@@ -11,7 +11,7 @@ export const site = {
   repo: "https://github.com/GetFoglio/foglio",
   /** GitHub organization that owns the app repository. */
   org: "https://github.com/GetFoglio",
-  version: "1.0.1",
+  version: "1.0.2",
   released: "2026-11-09",
   minMacOS: "14",
   license: "MIT / Apache-2.0",
