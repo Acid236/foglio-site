@@ -1,4 +1,4 @@
-import type { AppId, ComparisonRow, ComparisonSource, Locale } from "./types";
+import type { AppId, BaseLocale, ComparisonSource, RawComparisonRow } from "./types";
 
 export const comparisonApps: Record<AppId, { name: string; maker: string }> = {
   foglio: { name: "Foglio", maker: "Open source" },
@@ -15,11 +15,12 @@ const G = {
   formats: { en: "File formats", it: "Formati di file" },
   features: { en: "Features", it: "Funzionalità" },
   privacy: { en: "Privacy", it: "Privacy" },
-} satisfies Record<string, Record<Locale, string>>;
+} satisfies Record<string, Record<BaseLocale, string>>;
 
 const t = (en: string, it: string) => ({ en, it });
 
-export const comparisonRows: ComparisonRow[] = [
+/** Rows in English and Italian; the other languages come from content/<locale>/comparison.ts. */
+export const rawComparisonRows: RawComparisonRow[] = [
   // ── Price & license ───────────────────────────────────────────────
   {
     group: G.price,

@@ -64,7 +64,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -1363,4 +1365,79 @@ pre.code code {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+}
+
+/* ---------- Language picker ---------- */
+
+.lang-picker {
+  position: relative;
+}
+
+.lang-picker summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  color: var(--text-2);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.lang-picker summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-picker summary:hover,
+.lang-picker[open] summary {
+  color: var(--text);
+  background: var(--bg-alt);
+}
+
+.lang-picker ul {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 60;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  min-width: 190px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.lang-picker a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.lang-picker a:hover {
+  background: var(--bg-alt);
+}
+
+.lang-picker a[aria-current="true"],
+.footer-langs a[aria-current="true"] {
+  color: var(--accent-strong);
+  font-weight: 650;
+}
+
+.footer-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 32px;
+  font-size: 0.9rem;
+}
+
+.footer-langs a {
+  color: var(--text-2);
 }

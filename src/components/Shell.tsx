@@ -2,14 +2,14 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { copy } from "@/content";
 import { downloadUrl, site } from "@/content/facts";
-import type { Locale } from "@/content/types";
-import { asset, href, otherLocale } from "@/lib/i18n";
+import { locales, type Locale } from "@/content/types";
+import { asset, href } from "@/lib/i18n";
+import { localeInfo } from "@/lib/locales";
 import { Icon } from "./Icon";
 
 /** Header + main + footer around every page. `path` is the locale-less path of the page. */
 export function Shell({ locale, path, children }: { locale: Locale; path: string; children: ReactNode }) {
   const t = copy[locale].ui;
-  const other = otherLocale(locale);
   const nav = [
     { label: t.navCompare, to: "/compare/" },
     { label: t.navTechnology, to: "/technology/" },
@@ -36,9 +36,7 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
             {navLinks}
           </nav>
           <div className="header-actions">
-            <Link className="lang" href={href(other, path)} hrefLang={other} lang={other}>
-              {t.languageName}
-            </Link>
+            <LanguagePicker locale={locale} path={path} label={t.languageLabel} />
             <a className="icon-link" href={site.repo} aria-label={t.navGitHub} rel="noopener">
               <Icon name="github" size={20} />
             </a>
@@ -62,12 +60,38 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
         </div>
       </header>
       <main id="main">{children}</main>
-      <Footer locale={locale} />
+      <Footer locale={locale} path={path} />
     </>
   );
 }
 
-function Footer({ locale }: { locale: Locale }) {
+/** Language menu without JavaScript: a <details> dropdown of links to this page in every language. */
+function LanguagePicker({ locale, path, label }: { locale: Locale; path: string; label: string }) {
+  return (
+    <details className="lang-picker">
+      <summary aria-label={`${label}: ${localeInfo[locale].name}`}>
+        <Icon name="globe" size={17} />
+        <span>{localeInfo[locale].tag.slice(0, 2).toUpperCase()}</span>
+      </summary>
+      <ul>
+        {locales.map((l) => (
+          <li key={l}>
+            <Link
+              href={href(l, path)}
+              hrefLang={localeInfo[l].tag}
+              lang={localeInfo[l].tag}
+              aria-current={l === locale ? "true" : undefined}
+            >
+              {localeInfo[l].name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
+
+function Footer({ locale, path }: { locale: Locale; path: string }) {
   const t = copy[locale].ui;
   const cols: { title: string; links: { label: string; to: string; ext?: boolean }[] }[] = [
     {
@@ -128,6 +152,13 @@ function Footer({ locale }: { locale: Locale }) {
         ))}
       </div>
       <div className="wrap">
+        <nav className="footer-langs" aria-label={t.languageLabel}>
+          {locales.map((l) => (
+            <Link key={l} href={href(l, path)} hrefLang={localeInfo[l].tag} lang={localeInfo[l].tag} aria-current={l === locale ? "true" : undefined}>
+              {localeInfo[l].name}
+            </Link>
+          ))}
+        </nav>
         <p className="muted small trademark">{t.footerTrademark}</p>
       </div>
     </footer>

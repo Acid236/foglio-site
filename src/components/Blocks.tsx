@@ -114,7 +114,7 @@ export function DownloadButtons({ locale, center }: { locale: Locale; center?: b
  * Real screenshot of the app, light or dark following the visitor's system setting.
  * AVIF (≈20 KB) with WebP fallback, two widths, explicit size so nothing shifts while loading.
  */
-export function Screenshot({ locale, alt, priority }: { locale: Locale; alt: string; priority?: boolean }) {
+export function Screenshot({ locale, alt, priority }: { locale: "en" | "it"; alt: string; priority?: boolean }) {
   const set = (theme: string, ext: string) =>
     [720, 1213].map((w) => `${asset(`/screenshots/${locale}-${theme}-${w}.${ext}`)} ${w}w`).join(", ");
   const sizes = "(max-width: 1112px) calc(100vw - 32px), 1080px";

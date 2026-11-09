@@ -4,6 +4,7 @@ import { alternatives, comparisonChecked, comparisonSources, copy, guides } from
 import { downloadUrl, facts, releasesUrl, site } from "@/content/facts";
 import type { Article, Locale } from "@/content/types";
 import { absolute, formatDate, href } from "@/lib/i18n";
+import { localeInfo } from "@/lib/locales";
 import { Breadcrumbs, DownloadButtons, PageHero, Paragraphs, Positioning, Prose, Screenshot } from "@/components/Blocks";
 import { ComparisonTable } from "@/components/Comparison";
 import { Faq } from "@/components/Faq";
@@ -27,7 +28,7 @@ export function ComparePage({ locale }: { locale: Locale }) {
         </p>
         {comparisonSources.length > 0 && (
           <details className="sources">
-            <summary>{locale === "en" ? "Sources" : "Fonti"}</summary>
+            <summary>{c.ui.sources}</summary>
             <ul>
               {comparisonSources.map((s) => (
                 <li key={s.url}>
@@ -75,7 +76,7 @@ export function DownloadPage({ locale }: { locale: Locale }) {
         <p className="muted small">
           {site.name} {site.version} ·{" "}
           <a href={releasesUrl} rel="noopener">
-            {locale === "en" ? "All releases and checksums" : "Tutte le versioni e i checksum"}
+            {c.ui.allReleases}
           </a>
         </p>
         <ol className="steps">
@@ -133,7 +134,7 @@ export function DownloadPage({ locale }: { locale: Locale }) {
           downloadUrl,
           fileSize: `${facts.dmgMB}MB`,
           isAccessibleForFree: true,
-          offers: { "@type": "Offer", price: "0", priceCurrency: locale === "en" ? "USD" : "EUR" },
+          offers: { "@type": "Offer", price: "0", priceCurrency: localeInfo[locale].currency },
         }}
       />
     </Shell>
@@ -204,7 +205,7 @@ export function ArticlePage({ locale, kind, slug }: { locale: Locale; kind: Kind
         </header>
         {kind === "alternatives" && (
           <div className="wrap narrow">
-            <Screenshot locale={locale} alt={plain(a.h1)} />
+            <Screenshot locale={localeInfo[locale].screenshot} alt={plain(a.h1)} />
           </div>
         )}
         <div className="wrap narrow prose">
@@ -234,7 +235,7 @@ export function ArticlePage({ locale, kind, slug }: { locale: Locale; kind: Kind
           "@type": kind === "guides" ? "TechArticle" : "Article",
           headline: plain(a.h1),
           description: a.meta.description,
-          inLanguage: locale,
+          inLanguage: localeInfo[locale].tag,
           dateModified: a.updated,
           datePublished: a.updated,
           mainEntityOfPage: absolute(locale, path),

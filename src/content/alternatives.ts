@@ -1,4 +1,4 @@
-import type { Article, Locale } from "./types";
+import type { Article, BaseLocale } from "./types";
 
 const UPDATED = "2026-11-09";
 
@@ -746,4 +746,4 @@ const it: Article[] = [
   },
 ];
 
-export const alternatives: Record<Locale, Article[]> = { en, it };
+export const alternativesBase: Record<BaseLocale, Article[]> = { en, it };

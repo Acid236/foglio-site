@@ -4,6 +4,8 @@ import { ImageResponse } from "next/og";
 import { facts } from "@/content/facts";
 import type { Locale } from "@/content/types";
 
+const dec = (n: number) => String(n).replace(".", ",");
+
 const text: Record<Locale, { title: string; line: string }> = {
   en: {
     title: "The free, native spreadsheet for Mac",
@@ -11,7 +13,28 @@ const text: Record<Locale, { title: string; line: string }> = {
   },
   it: {
     title: "Il foglio di calcolo gratuito e nativo per Mac",
-    line: `Apre i file Excel · ${String(facts.dmgMB).replace(".", ",")} MB · si avvia in ${String(facts.launchSeconds).replace(".", ",")} s · open source`,
+    line: `Apre i file Excel · ${dec(facts.dmgMB)} MB · si avvia in ${dec(facts.launchSeconds)} s · open source`,
+  },
+  es: {
+    title: "La hoja de cálculo gratuita y nativa para Mac",
+    line: `Abre archivos de Excel · ${dec(facts.dmgMB)} MB · se abre en ${dec(facts.launchSeconds)} s · código abierto`,
+  },
+  fr: {
+    title: "Le tableur gratuit et natif pour Mac",
+    line: `Ouvre les fichiers Excel · ${dec(facts.dmgMB)} Mo · s'ouvre en ${dec(facts.launchSeconds)} s · open source`,
+  },
+  de: {
+    title: "Die kostenlose, native Tabellenkalkulation für den Mac",
+    line: `Öffnet Excel-Dateien · ${dec(facts.dmgMB)} MB · startet in ${dec(facts.launchSeconds)} s · Open Source`,
+  },
+  pt: {
+    title: "A planilha gratuita e nativa para Mac",
+    line: `Abre arquivos do Excel · ${dec(facts.dmgMB)} MB · abre em ${dec(facts.launchSeconds)} s · código aberto`,
+  },
+  // The image font has no Japanese glyphs: the Japanese preview uses the English text.
+  ja: {
+    title: "The free, native spreadsheet for Mac",
+    line: `Opens Excel files · ${facts.dmgMB} MB · launches in ${facts.launchSeconds} s · open source`,
   },
 };
 

@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 import { alternatives, guides } from "@/content";
 import { site } from "@/content/facts";
+import { locales } from "@/content/types";
 import { absolute } from "@/lib/i18n";
+import { languageAlternates } from "@/lib/metadata";
 
 export const dynamic = "force-static";
 
@@ -17,12 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guides.en.map((a) => ({ path: `/guides/${a.slug}/`, priority: 0.7, updated: a.updated })),
   ];
   return pages.flatMap((p) =>
-    (["en", "it"] as const).map((locale) => ({
+    locales.map((locale) => ({
       url: absolute(locale, p.path),
       lastModified: p.updated,
       changeFrequency: "monthly" as const,
       priority: locale === "en" ? p.priority : Math.round(p.priority * 90) / 100,
-      alternates: { languages: { en: absolute("en", p.path), it: absolute("it", p.path), "x-default": absolute("en", p.path) } },
+      alternates: { languages: languageAlternates(p.path, true) },
     })),
   );
 }

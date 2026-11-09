@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { alternatives, comparisonApps, comparisonRows, copy } from "@/content";
 import { downloadUrl, facts, site, sizeComparisonMB } from "@/content/facts";
-import type { Locale } from "@/content/types";
+import { locales, type Locale } from "@/content/types";
 import { absolute, asset, formatNumber, href } from "@/lib/i18n";
+import { localeInfo } from "@/lib/locales";
 import { Bars, ComparisonTable } from "@/components/Comparison";
 import { DownloadButtons, Paragraphs, Positioning, Screenshot } from "@/components/Blocks";
 import { Faq } from "@/components/Faq";
@@ -16,12 +17,13 @@ const formats = ["xlsx", "xlsm", "xls", "xlsb", "ods", "csv", "tsv", "txt", "pdf
 export function HomePage({ locale }: { locale: Locale }) {
   const c = copy[locale];
   const h = c.home;
+  const info = localeInfo[locale];
   const n = (x: number) => formatNumber(locale, x);
   const stats = [
     { value: `${n(facts.dmgMB)} MB`, label: h.statLabels.download },
     { value: `${n(facts.launchSeconds)} s`, label: h.statLabels.launch },
     { value: `${n(facts.idleMemoryMB)} MB`, label: h.statLabels.memory },
-    { value: locale === "en" ? "$0" : "0 €", label: h.statLabels.price },
+    { value: info.price, label: h.statLabels.price },
   ];
   const sizes = [
     { label: comparisonApps.foglio.name, value: sizeComparisonMB.foglio, highlight: true },
@@ -29,7 +31,7 @@ export function HomePage({ locale }: { locale: Locale }) {
     { label: comparisonApps.numbers.name, value: sizeComparisonMB.numbers },
     { label: comparisonApps.excel.name, value: sizeComparisonMB.excel },
   ].map((s) => ({ ...s, display: s.value >= 1000 ? `${n(s.value / 1000)} GB` : `${n(s.value)} MB` }));
-  const ui = homeUi[locale];
+  const ui = c.ui;
   const speedup = Math.round(facts.vlookupBeforeMs / facts.vlookupAfterMs / 100) * 100;
   const metrics = [
     { value: `${n(facts.open100kSeconds)} s`, label: h.statLabels.open100k },
@@ -37,7 +39,9 @@ export function HomePage({ locale }: { locale: Locale }) {
     {
       value: `${n(facts.vlookupAfterMs)} ms`,
       label: ui.lookupTitle,
-      sub: ui.lookupSub(n(Math.round(facts.vlookupBeforeMs / 100) / 10), new Intl.NumberFormat(locale === "en" ? "en-US" : "it-IT", { useGrouping: "always" }).format(speedup)),
+      sub: ui.lookupSub
+        .replace("{before}", n(Math.round(facts.vlookupBeforeMs / 100) / 10))
+        .replace("{times}", formatNumber(locale, speedup, { useGrouping: "always" })),
     },
   ];
   // Fewer, distinct features: speed, size and privacy have their own sections.
@@ -67,7 +71,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="wrap">
-          <Screenshot locale={locale} alt={plain(h.h1)} priority />
+          <Screenshot locale={info.screenshot} alt={plain(h.h1)} priority />
         </div>
       </section>
 
@@ -123,7 +127,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             </p>
           </div>
           <div className="two-col">
-            <Bars title={h.statLabels.download} unit={ui.lower} items={sizes} />
+            <Bars title={h.statLabels.download} unit={ui.smallerIsBetter} items={sizes} />
             <ul className="metrics">
               {metrics.map((m) => (
                 <li key={m.label}>
@@ -148,7 +152,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <DownloadButtons locale={locale} />
           </div>
           <div className="price-card" aria-hidden="true">
-            <span className="price">{locale === "en" ? "$0" : "0 €"}</span>
+            <span className="price">{info.price}</span>
             <span className="muted">{c.ui.downloadSub}</span>
             <span className="license">{site.license}</span>
           </div>
@@ -250,10 +254,10 @@ export function HomePage({ locale }: { locale: Locale }) {
               fileSize: `${facts.dmgMB}MB`,
               license: "https://opensource.org/licenses/MIT",
               isAccessibleForFree: true,
-              inLanguage: ["en", "it"],
+              inLanguage: locales.map((l) => localeInfo[l].tag),
               image: `${site.url}/icon-256.png`,
-              screenshot: `${site.url}/screenshots/${locale}-light.webp`,
-              offers: { "@type": "Offer", price: "0", priceCurrency: locale === "en" ? "USD" : "EUR" },
+              screenshot: `${site.url}/screenshots/${info.screenshot}-light-1213.webp`,
+              offers: { "@type": "Offer", price: "0", priceCurrency: info.currency },
               codeRepository: site.repo,
             },
             {
@@ -261,7 +265,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               "@id": `${site.url}/#website`,
               name: site.name,
               url: site.url,
-              inLanguage: locale,
+              inLanguage: info.tag,
             },
           ],
         }}
@@ -270,47 +274,8 @@ export function HomePage({ locale }: { locale: Locale }) {
   );
 }
 
-const homeUi: Record<
-  Locale,
-  {
-    lower: string;
-    lookupTitle: string;
-    lookupSub: (before: string, times: string) => string;
-    tested: string;
-    opens: string;
-    arch: [string, string, string, string];
-  }
-> = {
-  en: {
-    lower: "smaller is better",
-    lookupTitle: "1,000 VLOOKUPs over 10,000 rows",
-    lookupSub: (before, times) => `${before} seconds in the original engine: about ${times}× faster`,
-    tested: "Tested on a Mac with an M4 processor, macOS 27.",
-    opens: "Opens",
-    arch: [
-      "Windows, menus, documents and a custom grid view drawn with AppKit",
-      "Rust core",
-      "Workbook model, IronCalc formula engine (patched fork), xlsx / xls / ods / csv",
-      "Architecture: a Swift/AppKit app calls a Rust core through a plain C interface",
-    ],
-  },
-  it: {
-    lower: "più piccolo è meglio",
-    lookupTitle: "1.000 CERCA.VERT su 10.000 righe",
-    lookupSub: (before, times) => `${before} secondi nel motore originale: circa ${times} volte più veloce`,
-    tested: "Testato su un Mac con processore M4, macOS 27.",
-    opens: "Apre",
-    arch: [
-      "Finestre, menu, documenti e una griglia su misura disegnata con AppKit",
-      "Nucleo in Rust",
-      "Modello della cartella, motore di formule IronCalc (fork con patch), xlsx / xls / ods / csv",
-      "Architettura: un'app Swift/AppKit chiama un nucleo in Rust tramite una semplice interfaccia C",
-    ],
-  },
-};
-
 function Architecture({ locale }: { locale: Locale }) {
-  const [app, core, coreText, label] = homeUi[locale].arch;
+  const [app, core, coreText, label] = copy[locale].ui.arch;
   return (
     <figure className="arch" aria-label={label}>
       <div className="arch-box">

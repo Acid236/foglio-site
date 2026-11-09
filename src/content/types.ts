@@ -7,8 +7,11 @@
  * No other Markdown, no HTML.
  */
 
-export type Locale = "en" | "it";
-export const locales: Locale[] = ["en", "it"];
+/** Languages written by hand in the source files (comparison rows carry both inline). */
+export type BaseLocale = "en" | "it";
+/** All site languages. English is the default (served at "/"), the others under "/<code>/". */
+export type Locale = BaseLocale | "es" | "fr" | "de" | "pt" | "ja";
+export const locales: Locale[] = ["en", "it", "es", "fr", "de", "pt", "ja"];
 
 /** <title> (≤ 60 characters, the site appends nothing) and meta description (120–155 characters). */
 export interface Meta {
@@ -81,7 +84,17 @@ export interface SiteCopy {
     readMore: string;
     faqTitle: string;
     updated: string; // "Updated" (followed by a date)
-    languageName: string; // name of the OTHER language in its own language, e.g. "Italiano" on the English site
+    languageLabel: string; // "Language", label of the language picker
+    sources: string; // "Sources" (comparison table)
+    allReleases: string; // "All releases and checksums"
+    smallerIsBetter: string; // "smaller is better" (bar chart)
+    lookupTitle: string; // "1,000 VLOOKUPs over 10,000 rows" (use the function's local name)
+    /** Under the lookup metric; {before} = seconds in the original engine, {times} = speed-up. */
+    lookupSub: string;
+    tested: string; // "Tested on a Mac with an M4 processor, macOS 27."
+    opens: string; // "Opens" (before the list of file formats)
+    /** Architecture diagram: [app layer text, core title, core text, aria label]. */
+    arch: [string, string, string, string];
     skipToContent: string;
     footerTagline: string;
     footerLicense: string;
@@ -181,18 +194,37 @@ export interface SiteCopy {
   guidesIndex: { h1: string; intro: string[] };
 }
 
-/** One row of the big comparison table. */
+/** One row of the big comparison table, as written in comparison.ts (English + Italian). */
+export interface RawComparisonRow {
+  label: Record<BaseLocale, string>;
+  /** Group heading the row belongs to (rows are grouped in the order they appear). */
+  group: Record<BaseLocale, string>;
+  cells: Record<AppId, RawComparisonCell>;
+}
+
+export interface RawComparisonCell {
+  /** Text shown in the cell. A plain string is the same in every language (e.g. "MPL-2.0"). */
+  text: string | Record<BaseLocale, string>;
+  tone: ComparisonCell["tone"];
+}
+
+/** A comparison row with every language filled in (see content/comparison-i18n.ts). */
 export interface ComparisonRow {
   label: Record<Locale, string>;
-  /** Group heading the row belongs to (rows are grouped in the order they appear). */
   group: Record<Locale, string>;
   cells: Record<AppId, ComparisonCell>;
 }
 
+/**
+ * Translations of the comparison table for the languages that are not written inline:
+ * English source text (row labels, group names, cell texts) → translated text.
+ */
+export type ComparisonDictionary = Record<string, string>;
+
 export type AppId = "foglio" | "excel" | "numbers" | "libreoffice" | "sheets";
 
 export interface ComparisonCell {
-  /** Text shown in the cell. Use a Record when the text differs per language. */
+  /** Text shown in the cell. A plain string is the same in every language. */
   text: string | Record<Locale, string>;
   /** Colours the cell: good = green check, bad = red cross, partial = amber, neutral = plain. */
   tone: "good" | "bad" | "partial" | "neutral";
