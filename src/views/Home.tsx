@@ -175,12 +175,12 @@ export function HomePage({ locale }: { locale: Locale }) {
             </p>
           </div>
           {teaserRows.length > 0 && <ComparisonTable locale={locale} rows={teaserRows} caption={h.compareTitle} />}
-          <p className="center">
+          <div className="more-links">
             <Link className="btn btn-ghost" href={href(locale, "/compare/")}>
               {c.ui.navCompare}
               <Icon name="arrow" size={16} />
             </Link>
-          </p>
+          </div>
         </div>
       </section>
 
@@ -219,16 +219,16 @@ export function HomePage({ locale }: { locale: Locale }) {
                 </Link>
               ))}
             </div>
-            <p className="center">
+            <div className="more-links">
               <Link className="btn btn-ghost" href={href(locale, "/alternatives/")}>
                 {c.ui.navAlternatives}
                 <Icon name="arrow" size={16} />
-              </Link>{" "}
+              </Link>
               <Link className="btn btn-ghost" href={href(locale, "/guides/")}>
                 {c.ui.navGuides}
                 <Icon name="arrow" size={16} />
               </Link>
-            </p>
+            </div>
           </div>
         </section>
       )}

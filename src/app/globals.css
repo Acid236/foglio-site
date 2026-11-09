@@ -1440,3 +1440,12 @@ pre.code code {
 .footer-langs a {
   color: var(--text-2);
 }
+
+/* Buttons under a card grid or table ("See all alternatives", "Guides"). */
+.more-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 36px;
+}
