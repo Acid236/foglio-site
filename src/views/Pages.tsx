@@ -21,7 +21,7 @@ export function ComparePage({ locale }: { locale: Locale }) {
   const sources = [...comparisonPriceSources[locale], ...comparisonSources];
   return (
     <Shell locale={locale} path="/compare/">
-      <PageHero locale={locale} h1={p.h1} intro={p.intro} trail={[{ name: c.ui.navCompare, path: "/compare/" }]} />
+      <PageHero locale={locale} h1={p.h1} intro={p.intro} trail={[{ name: c.ui.navCompare, path: "/compare/" }]} wide />
       <div className="wrap">
         <Positioning locale={locale} />
         <h2 className="table-title">{p.tableTitle}</h2>
@@ -141,7 +141,7 @@ export function ArticleIndexPage({ locale, kind }: { locale: Locale; kind: Kind 
   const label = kind === "alternatives" ? c.ui.navAlternatives : c.ui.navGuides;
   return (
     <Shell locale={locale} path={`/${kind}/`}>
-      <PageHero locale={locale} h1={p.h1} intro={p.intro} trail={[{ name: label, path: `/${kind}/` }]} />
+      <PageHero locale={locale} h1={p.h1} intro={p.intro} trail={[{ name: label, path: `/${kind}/` }]} wide />
       <div className="wrap">
         <div className="cards cards-2">
           {lists[kind][locale].map((a) => (

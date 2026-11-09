@@ -7,7 +7,7 @@ export function Faq({ items, title, locale, id = "faq" }: { items: FAQ[]; title:
   if (!items.length) return null;
   return (
     <section className="section" aria-labelledby={id}>
-      <div className="wrap narrow">
+      <div className="wrap faq-layout">
         <h2 id={id}>{title}</h2>
         <div className="faq">
           {items.map((f) => (

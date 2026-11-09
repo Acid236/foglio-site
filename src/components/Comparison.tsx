@@ -66,7 +66,7 @@ export function ComparisonTable({
           <tbody key={g.name}>
             <tr className="group-row">
               <th scope="colgroup" colSpan={apps.length + 1}>
-                {g.name}
+                <span>{g.name}</span>
               </th>
             </tr>
             {g.rows.map((r) => (

@@ -70,20 +70,17 @@ export function HomePage({ locale }: { locale: Locale }) {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="wrap">
-          <Screenshot locale={info.screenshot} alt={c.ui.screenshotAlt} priority />
-        </div>
-      </section>
-
-      <section className="stats">
-        <div className="wrap stats-grid">
-          {stats.map((s) => (
-            <div key={s.label} className="stat">
-              <span className="stat-value">{s.value}</span>
-              <span className="stat-label">{s.label}</span>
-            </div>
-          ))}
+          <dl className="stats">
+            {stats.map((s, i) => (
+              <div key={s.label} className={i === stats.length - 1 ? "stat is-selected" : "stat"}>
+                <dt>{s.label}</dt>
+                <dd>{s.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="stage">
+            <Screenshot locale={info.screenshot} alt={c.ui.screenshotAlt} priority />
+          </div>
         </div>
       </section>
 

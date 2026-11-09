@@ -145,15 +145,18 @@ export function PageHero({
   h1,
   intro,
   trail,
+  wide,
 }: {
   locale: Locale;
   h1: string;
   intro: string[];
   trail: { name: string; path: string }[];
+  /** Aligned to the full content width, for pages whose content below is wide (tables, grids). */
+  wide?: boolean;
 }) {
   return (
-    <header className="page-hero">
-      <div className="wrap narrow">
+    <header className={wide ? "page-hero is-wide" : "page-hero"}>
+      <div className={wide ? "wrap" : "wrap narrow"}>
         <Breadcrumbs locale={locale} trail={trail} />
         <h1>{h1}</h1>
         <Paragraphs items={intro} locale={locale} className="lead" />
