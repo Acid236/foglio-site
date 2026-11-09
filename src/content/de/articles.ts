@@ -32,7 +32,7 @@ export const alternatives: Article[] = [
       {
         heading: "Was du gewinnst",
         body: [
-          "**Es kostet nichts, dauerhaft.** Kein Abo, keine Testphase, kein Konto, keine Werbung. Foglio steht unter den Lizenzen MIT und Apache-2.0, der Quellcode liegt auf [GitHub](https://github.com/Acid236/foglio).",
+          "**Es kostet nichts, dauerhaft.** Kein Abo, keine Testphase, kein Konto, keine Werbung. Foglio steht unter den Lizenzen MIT und Apache-2.0, der Quellcode liegt auf [GitHub](https://github.com/GetFoglio/foglio).",
           "**Es ist winzig und schnell.** Der Download ist 7,5 MB groß, die installierte App rund 19 MB – gegenüber mehr als einem Gigabyte allein für Excel. Foglio ist nach 0,24 s einsatzbereit und braucht mit leerem Blatt rund 58 MB Arbeitsspeicher. Eine Arbeitsmappe mit 100.000 Zeilen und 300.000 Formeln öffnet in 1,1 s und ist nach einer Änderung in 16 ms neu berechnet.",
           "**Es bleibt auf deinem Mac.** Foglio baut von sich aus keine Netzwerkverbindungen auf und hat keine Telemetrie. Du musst dich nirgends anmelden, um eine Datei zu öffnen.",
         ],
@@ -84,7 +84,7 @@ export const alternatives: Article[] = [
         heading: "So probierst du Foglio mit deinen eigenen Dateien aus",
         body: [
           "[Lade Foglio herunter](/download/) (7,5 MB, macOS 14 oder neuer), zieh es in den Ordner „Programme“ und öffne es. Da Foglio 1.0 nicht von Apple notarisiert ist, fragt macOS beim ersten Mal nach; die Download-Seite zeigt, wie es geht. Öffne dann die Kopie einer echten Arbeitsmappe über File ▸ Open oder klick mit der rechten Maustaste auf eine `.xlsx`-Datei und wähle Öffnen mit ▸ Foglio.",
-          "Prüf, was dir wichtig ist: Summen, Suchfunktionen, Datumsangaben, Zahlenformate, Diagramme. Behalte das Original, bis du dir sicher bist. Wenn etwas falsch aussieht, [melde es bitte auf GitHub](https://github.com/Acid236/foglio/issues), am besten mit einer Beispieldatei.",
+          "Prüf, was dir wichtig ist: Summen, Suchfunktionen, Datumsangaben, Zahlenformate, Diagramme. Behalte das Original, bis du dir sicher bist. Wenn etwas falsch aussieht, [melde es bitte auf GitHub](https://github.com/GetFoglio/foglio/issues), am besten mit einer Beispieldatei.",
         ],
       },
     ],

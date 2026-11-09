@@ -32,7 +32,7 @@ const en: Article[] = [
       {
         heading: "What you gain",
         body: [
-          "**It costs nothing, permanently.** No subscription, no trial, no account, no ads. Foglio is licensed under MIT and Apache-2.0, and the source code is on [GitHub](https://github.com/Acid236/foglio).",
+          "**It costs nothing, permanently.** No subscription, no trial, no account, no ads. Foglio is licensed under MIT and Apache-2.0, and the source code is on [GitHub](https://github.com/GetFoglio/foglio).",
           "**It is tiny and fast.** The download is 7.5 MB and the installed app is about 19 MB, against more than a gigabyte for Excel alone. Foglio opens to a usable window in 0.24 s and uses about 58 MB of memory with an empty sheet. A 100,000-row workbook with 300,000 formulas opens in 1.1 s, and after an edit it recalculates in 16 ms.",
           "**It stays on your Mac.** Foglio makes no network connections of its own and has no telemetry. You do not sign in to anything to open a file.",
         ],
@@ -84,7 +84,7 @@ const en: Article[] = [
         heading: "How to try Foglio with your own files",
         body: [
           "[Download Foglio](/download/) (7.5 MB, macOS 14 or later), drag it to Applications and open it. Because Foglio 1.0 is not notarized by Apple, macOS asks for confirmation the first time; the download page shows how. Then open a copy of a real workbook with File ▸ Open, or right-click an `.xlsx` file and choose Open With ▸ Foglio.",
-          "Check the things that matter to you: totals, lookups, dates, number formats, charts. Keep the original until you are confident. If something looks wrong, please [report it on GitHub](https://github.com/Acid236/foglio/issues) with a sample file.",
+          "Check the things that matter to you: totals, lookups, dates, number formats, charts. Keep the original until you are confident. If something looks wrong, please [report it on GitHub](https://github.com/GetFoglio/foglio/issues) with a sample file.",
         ],
       },
     ],
@@ -410,7 +410,7 @@ const it: Article[] = [
       {
         heading: "Cosa guadagni",
         body: [
-          "**Non costa nulla, per sempre.** Nessun abbonamento, nessuna prova, nessun account, nessuna pubblicità. Foglio è distribuito con licenza MIT e Apache-2.0 e il codice sorgente è su [GitHub](https://github.com/Acid236/foglio).",
+          "**Non costa nulla, per sempre.** Nessun abbonamento, nessuna prova, nessun account, nessuna pubblicità. Foglio è distribuito con licenza MIT e Apache-2.0 e il codice sorgente è su [GitHub](https://github.com/GetFoglio/foglio).",
           "**È piccolissimo e veloce.** Il download pesa 7,5 MB e l'app installata circa 19 MB, contro oltre un gigabyte del solo Excel. Foglio mostra una finestra pronta in 0,24 s e usa circa 58 MB di memoria con un foglio vuoto. Una cartella da 100.000 righe e 300.000 formule si apre in 1,1 s e dopo una modifica si ricalcola in 16 ms.",
           "**Resta sul tuo Mac.** Foglio non apre connessioni di rete di sua iniziativa e non ha telemetria. Per aprire un file non devi accedere a nessun servizio.",
         ],
@@ -460,7 +460,7 @@ const it: Article[] = [
         heading: "Come provare Foglio con i tuoi file",
         body: [
           "[Scarica Foglio](/download/) (7,5 MB, macOS 14 o successivo), trascinalo in Applicazioni e aprilo. Poiché Foglio 1.0 non è notarizzato da Apple, la prima volta macOS chiede conferma: la pagina di download spiega come fare. Poi apri una copia di una cartella di lavoro reale con Archivio ▸ Apri, oppure fai clic destro su un file `.xlsx` e scegli Apri con ▸ Foglio.",
-          "Controlla le cose che contano per te: totali, ricerche, date, formati numerici, grafici. Conserva l'originale finché non sei sicuro. Se qualcosa non torna, [segnalalo su GitHub](https://github.com/Acid236/foglio/issues) allegando un file di esempio.",
+          "Controlla le cose che contano per te: totali, ricerche, date, formati numerici, grafici. Conserva l'originale finché non sei sicuro. Se qualcosa non torna, [segnalalo su GitHub](https://github.com/GetFoglio/foglio/issues) allegando un file di esempio.",
         ],
       },
     ],

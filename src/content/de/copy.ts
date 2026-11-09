@@ -152,7 +152,7 @@ export const copyDe: SiteCopy = {
     freeTitle: "Kostenlos – und das bleibt so",
     freeText: [
       "Foglio hat keinen Preis, keine Testphase, kein Abo und keine Bezahlversion. Du brauchst weder eine Apple-ID noch ein Microsoft- oder Google-Konto, und es gibt keine Werbung.",
-      "Der Quellcode liegt auf [GitHub](https://github.com/Acid236/foglio) unter den Lizenzen MIT und Apache-2.0: Jeder kann ihn lesen, kompilieren, verbessern oder forken. Deine Tabellen sind normale `.xlsx`-Dateien, die sich in Excel, Numbers, LibreOffice und Google Sheets öffnen lassen: kein Lock-in.",
+      "Der Quellcode liegt auf [GitHub](https://github.com/GetFoglio/foglio) unter den Lizenzen MIT und Apache-2.0: Jeder kann ihn lesen, kompilieren, verbessern oder forken. Deine Tabellen sind normale `.xlsx`-Dateien, die sich in Excel, Numbers, LibreOffice und Google Sheets öffnen lassen: kein Lock-in.",
     ],
     compareTitle: "Wie Foglio abschneidet",
     compareText:
@@ -200,7 +200,7 @@ export const copyDe: SiteCopy = {
       },
       {
         q: "Ist Foglio fertig?",
-        a: "Foglio 1.0 erledigt alltägliche Tabellen von Anfang bis Ende und wird von 69 automatisierten UI-Tests abgedeckt, ist aber eine Erstversion. Behalte Sicherungskopien wichtiger Dateien und melde Probleme auf [GitHub](https://github.com/Acid236/foglio/issues).",
+        a: "Foglio 1.0 erledigt alltägliche Tabellen von Anfang bis Ende und wird von 69 automatisierten UI-Tests abgedeckt, ist aber eine Erstversion. Behalte Sicherungskopien wichtiger Dateien und melde Probleme auf [GitHub](https://github.com/GetFoglio/foglio/issues).",
       },
     ],
   },
@@ -271,7 +271,7 @@ export const copyDe: SiteCopy = {
     h1: "Wie Foglio gebaut ist – und warum es dadurch klein und schnell ist",
     intro: [
       "Die meisten modernen Desktop-Apps bringen eine Kopie eines Webbrowsers, eine Java-Laufzeitumgebung oder ein großes plattformübergreifendes Framework mit. Foglio bringt nichts davon mit. Es ist eine native Mac-App in Swift und AppKit; die Tabellen-Engine ist in Rust geschrieben und direkt in die App eingebunden.",
-      "Diese Seite erklärt die Architektur zweimal: zuerst in einfachen Worten, dann so genau, dass sich Entwickler im [Quellcode](https://github.com/Acid236/foglio) zurechtfinden.",
+      "Diese Seite erklärt die Architektur zweimal: zuerst in einfachen Worten, dann so genau, dass sich Entwickler im [Quellcode](https://github.com/GetFoglio/foglio) zurechtfinden.",
     ],
     sections: [
       {
@@ -340,7 +340,7 @@ export const copyDe: SiteCopy = {
       },
       {
         q: "Kann ich Foglio selbst kompilieren?",
-        a: "Ja. Installiere die Xcode Command Line Tools und Rust und führe dann `scripts/build.sh` aus. Die genauen Befehle stehen in der [README](https://github.com/Acid236/foglio#building-from-source).",
+        a: "Ja. Installiere die Xcode Command Line Tools und Rust und führe dann `scripts/build.sh` aus. Die genauen Befehle stehen in der [README](https://github.com/GetFoglio/foglio#building-from-source).",
       },
       {
         q: "Fließen die Änderungen an IronCalc zurück ins Original?",
@@ -375,7 +375,7 @@ export const copyDe: SiteCopy = {
     ],
     gatekeeperTitle: "„Nicht verifizierter Entwickler“: So öffnest du Foglio beim ersten Mal",
     gatekeeperText: [
-      "Foglio 1.0 ist ad hoc signiert statt mit einem kostenpflichtigen Apple-Developer-Konto signiert und notarisiert. Gatekeeper kann deshalb nicht dafür bürgen und zeigt beim ersten Öffnen eine Warnung. Das ist bei kleinen Open-Source-Projekten normal, und du kannst jede Zeile des [Quellcodes](https://github.com/Acid236/foglio) lesen oder die App selbst kompilieren.",
+      "Foglio 1.0 ist ad hoc signiert statt mit einem kostenpflichtigen Apple-Developer-Konto signiert und notarisiert. Gatekeeper kann deshalb nicht dafür bürgen und zeigt beim ersten Öffnen eine Warnung. Das ist bei kleinen Open-Source-Projekten normal, und du kannst jede Zeile des [Quellcodes](https://github.com/GetFoglio/foglio) lesen oder die App selbst kompilieren.",
       "**macOS 15 Sequoia oder neuer:** Doppelklicke auf Foglio und schließ die Warnung. Öffne **Systemeinstellungen ▸ Datenschutz & Sicherheit**, scroll zum Hinweis zu Foglio und klick auf **Dennoch öffnen**. Bestätige dann mit deinem Passwort oder Touch ID.",
       "**macOS 14 Sonoma:** Klick im Ordner „Programme“ mit der rechten Maustaste (oder bei gedrückter Ctrl-Taste) auf Foglio, wähle **Öffnen** und klick im Dialog erneut auf **Öffnen**.",
       "Danach öffnet sich Foglio ganz normal wie jede andere App.",
@@ -391,7 +391,7 @@ export const copyDe: SiteCopy = {
     sourceTitle: "Lieber selbst kompilieren?",
     sourceText: [
       "Foglio ist Open Source unter MIT und Apache-2.0. Mit installierten Xcode Command Line Tools und Rust baut `scripts/build.sh` in wenigen Minuten dieselbe Universal-App aus dem Quellcode, ohne Xcode.",
-      "Versionshinweise, ältere Versionen und den Issue-Tracker findest du auf [GitHub](https://github.com/Acid236/foglio/releases). Neugierig, wie es funktioniert? Lies mehr über [die Technik](/technology/).",
+      "Versionshinweise, ältere Versionen und den Issue-Tracker findest du auf [GitHub](https://github.com/GetFoglio/foglio/releases). Neugierig, wie es funktioniert? Lies mehr über [die Technik](/technology/).",
     ],
     faq: [
       {

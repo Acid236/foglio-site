@@ -8,7 +8,9 @@ export const site = {
   name: "Foglio",
   domain: "getfoglio.app",
   url: "https://getfoglio.app",
-  repo: "https://github.com/Acid236/foglio",
+  repo: "https://github.com/GetFoglio/foglio",
+  /** GitHub organization that owns the app repository. */
+  org: "https://github.com/GetFoglio",
   version: "1.0",
   released: "2026-11-09",
   minMacOS: "14",

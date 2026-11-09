@@ -32,7 +32,7 @@ export const alternatives: Article[] = [
       {
         heading: "Ce que vous gagnez",
         body: [
-          "**C'est gratuit, pour de bon.** Pas d'abonnement, pas d'essai, pas de compte, pas de publicité. Foglio est sous licences MIT et Apache-2.0, et le code source est sur [GitHub](https://github.com/Acid236/foglio).",
+          "**C'est gratuit, pour de bon.** Pas d'abonnement, pas d'essai, pas de compte, pas de publicité. Foglio est sous licences MIT et Apache-2.0, et le code source est sur [GitHub](https://github.com/GetFoglio/foglio).",
           "**C'est minuscule et rapide.** 7,5 Mo à télécharger et environ 19 Mo une fois installé, contre plus d'un gigaoctet pour Excel seul. Foglio affiche une fenêtre utilisable en 0,24 s et occupe environ 58 Mo de mémoire avec une feuille vide. Un classeur de 100 000 lignes et 300 000 formules s'ouvre en 1,1 s et se recalcule en 16 ms après une modification.",
           "**Tout reste sur votre Mac.** Foglio n'établit aucune connexion réseau de lui-même et n'a pas de télémétrie. Vous n'avez à vous connecter à rien pour ouvrir un fichier.",
         ],
@@ -84,7 +84,7 @@ export const alternatives: Article[] = [
         heading: "Essayer Foglio avec vos propres fichiers",
         body: [
           "[Téléchargez Foglio](/download/) (7,5 Mo, macOS 14 ou ultérieur), glissez-le dans Applications et ouvrez-le. Comme Foglio 1.0 n'est pas notarié par Apple, macOS demande une confirmation la première fois ; la page de téléchargement explique comment faire. Ouvrez ensuite la copie d'un vrai classeur avec File ▸ Open (les menus de Foglio sont en anglais), ou faites un clic droit sur un fichier `.xlsx` et choisissez Ouvrir avec ▸ Foglio.",
-          "Vérifiez ce qui compte pour vous : totaux, recherches, dates, formats de nombre, graphiques. Gardez l'original tant que vous n'êtes pas sûr de vous. Si quelque chose ne va pas, [signalez-le sur GitHub](https://github.com/Acid236/foglio/issues) avec un fichier d'exemple.",
+          "Vérifiez ce qui compte pour vous : totaux, recherches, dates, formats de nombre, graphiques. Gardez l'original tant que vous n'êtes pas sûr de vous. Si quelque chose ne va pas, [signalez-le sur GitHub](https://github.com/GetFoglio/foglio/issues) avec un fichier d'exemple.",
         ],
       },
     ],

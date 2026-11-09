@@ -434,7 +434,7 @@ export const comparisonSources: ComparisonSource[] = [
   },
   {
     label: "Foglio README: features, formats and limitations",
-    url: "https://github.com/Acid236/foglio#readme",
+    url: "https://github.com/GetFoglio/foglio#readme",
   },
 ];
 

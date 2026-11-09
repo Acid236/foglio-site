@@ -240,7 +240,13 @@ export function ArticlePage({ locale, kind, slug }: { locale: Locale; kind: Kind
           datePublished: a.updated,
           mainEntityOfPage: absolute(locale, path),
           author: { "@type": "Organization", name: `${site.name} contributors`, url: site.repo },
-          publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: `${site.url}/icon-256.png` } },
+          publisher: {
+            "@type": "Organization",
+            name: site.name,
+            url: site.url,
+            logo: { "@type": "ImageObject", url: `${site.url}/icon-256.png` },
+            sameAs: [site.repo, site.org],
+          },
           image: `${site.url}/og-${locale}.png`,
         }}
       />

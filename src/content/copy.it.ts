@@ -152,7 +152,7 @@ export const copyIt: SiteCopy = {
     freeTitle: "Gratis, e resta gratis",
     freeText: [
       "Foglio non ha un prezzo, una prova a tempo, un abbonamento o una versione a pagamento. Non serve un Apple Account, un account Microsoft o un account Google per usarlo, e non c'è pubblicità.",
-      "Il codice sorgente è su [GitHub](https://github.com/Acid236/foglio) con licenza MIT e Apache-2.0: chiunque può leggerlo, compilarlo, migliorarlo o crearne una versione propria. I tuoi fogli sono normali file `.xlsx` che si aprono in Excel, Numbers, LibreOffice e Fogli Google: nessun vincolo.",
+      "Il codice sorgente è su [GitHub](https://github.com/GetFoglio/foglio) con licenza MIT e Apache-2.0: chiunque può leggerlo, compilarlo, migliorarlo o crearne una versione propria. I tuoi fogli sono normali file `.xlsx` che si aprono in Excel, Numbers, LibreOffice e Fogli Google: nessun vincolo.",
     ],
     compareTitle: "Come si confronta",
     compareText:
@@ -200,7 +200,7 @@ export const copyIt: SiteCopy = {
       },
       {
         q: "Foglio è un'app finita?",
-        a: "Foglio 1.0 gestisce dall'inizio alla fine i fogli di tutti i giorni ed è coperto da 69 test automatici dell'interfaccia, ma è una prima versione. Tieni un backup dei file importanti e segnala i problemi su [GitHub](https://github.com/Acid236/foglio/issues).",
+        a: "Foglio 1.0 gestisce dall'inizio alla fine i fogli di tutti i giorni ed è coperto da 69 test automatici dell'interfaccia, ma è una prima versione. Tieni un backup dei file importanti e segnala i problemi su [GitHub](https://github.com/GetFoglio/foglio/issues).",
       },
     ],
   },
@@ -269,7 +269,7 @@ export const copyIt: SiteCopy = {
     h1: "Come è fatto Foglio, e perché è così piccolo e veloce",
     intro: [
       "Molte app moderne si portano dietro una copia di un browser, una macchina virtuale Java o un grande framework multipiattaforma. Foglio non contiene nulla di tutto questo. È un'app Mac nativa in Swift e AppKit, con il motore di calcolo scritto in Rust e collegato direttamente all'app.",
-      "Questa pagina spiega l'architettura due volte: prima a parole semplici, poi con abbastanza dettagli perché uno sviluppatore possa orientarsi nel [codice sorgente](https://github.com/Acid236/foglio).",
+      "Questa pagina spiega l'architettura due volte: prima a parole semplici, poi con abbastanza dettagli perché uno sviluppatore possa orientarsi nel [codice sorgente](https://github.com/GetFoglio/foglio).",
     ],
     sections: [
       {
@@ -338,7 +338,7 @@ export const copyIt: SiteCopy = {
       },
       {
         q: "Posso compilare Foglio da solo?",
-        a: "Sì. Installa gli Xcode Command Line Tools e Rust, poi esegui `scripts/build.sh`. Il [README](https://github.com/Acid236/foglio#building-from-source) riporta i comandi esatti.",
+        a: "Sì. Installa gli Xcode Command Line Tools e Rust, poi esegui `scripts/build.sh`. Il [README](https://github.com/GetFoglio/foglio#building-from-source) riporta i comandi esatti.",
       },
       {
         q: "Le modifiche a IronCalc sono disponibili per tutti?",
@@ -373,7 +373,7 @@ export const copyIt: SiteCopy = {
     ],
     gatekeeperTitle: "“Sviluppatore non identificato”: come aprire Foglio la prima volta",
     gatekeeperText: [
-      "Foglio 1.0 ha una firma ad-hoc e non è firmato e autenticato (notarizzato) con un account sviluppatore Apple a pagamento, quindi Gatekeeper non può garantirlo e la prima apertura mostra un avviso. È normale per i piccoli progetti open source, e puoi leggere ogni riga del [codice sorgente](https://github.com/Acid236/foglio) o compilare l'app da solo.",
+      "Foglio 1.0 ha una firma ad-hoc e non è firmato e autenticato (notarizzato) con un account sviluppatore Apple a pagamento, quindi Gatekeeper non può garantirlo e la prima apertura mostra un avviso. È normale per i piccoli progetti open source, e puoi leggere ogni riga del [codice sorgente](https://github.com/GetFoglio/foglio) o compilare l'app da solo.",
       "**macOS 15 Sequoia o successivi:** fai doppio clic su Foglio e chiudi l'avviso. Apri **Impostazioni di Sistema ▸ Privacy e sicurezza**, scorri fino al messaggio su Foglio e fai clic su **Apri comunque**, poi conferma con la password o il Touch ID.",
       "**macOS 14 Sonoma:** in Applicazioni fai clic destro (o Ctrl-clic) su Foglio, scegli **Apri**, poi fai clic su **Apri** nella finestra di dialogo.",
       "Da quel momento Foglio si apre normalmente, come qualsiasi altra app.",
@@ -388,7 +388,7 @@ export const copyIt: SiteCopy = {
     sourceTitle: "Preferisci compilarlo da solo?",
     sourceText: [
       "Foglio è open source con licenza MIT e Apache-2.0. Con gli Xcode Command Line Tools e Rust installati, `scripts/build.sh` crea la stessa app universale dal codice sorgente in pochi minuti, senza Xcode.",
-      "Note di rilascio, versioni precedenti e segnalazioni sono su [GitHub](https://github.com/Acid236/foglio/releases). Vuoi sapere come funziona? Leggi la pagina sulla [tecnologia](/technology/).",
+      "Note di rilascio, versioni precedenti e segnalazioni sono su [GitHub](https://github.com/GetFoglio/foglio/releases). Vuoi sapere come funziona? Leggi la pagina sulla [tecnologia](/technology/).",
     ],
     faq: [
       {

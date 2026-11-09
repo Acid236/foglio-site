@@ -1,6 +1,6 @@
 # getfoglio.app
 
-The website of [Foglio](https://github.com/Acid236/foglio), the free, open-source, native
+The website of [Foglio](https://github.com/GetFoglio/foglio), the free, open-source, native
 spreadsheet app for macOS.
 
 Next.js (App Router) + TypeScript, exported as static HTML. After `next build`,

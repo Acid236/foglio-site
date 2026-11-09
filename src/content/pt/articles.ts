@@ -34,7 +34,7 @@ export const alternatives: Article[] = [
       {
         heading: "O que você ganha",
         body: [
-          "**Não custa nada, para sempre.** Sem assinatura, sem período de teste, sem conta, sem anúncios. O Foglio tem licença MIT e Apache-2.0, e o código-fonte está no [GitHub](https://github.com/Acid236/foglio).",
+          "**Não custa nada, para sempre.** Sem assinatura, sem período de teste, sem conta, sem anúncios. O Foglio tem licença MIT e Apache-2.0, e o código-fonte está no [GitHub](https://github.com/GetFoglio/foglio).",
           "**É minúsculo e rápido.** O download tem 7,5 MB e o app instalado ocupa cerca de 19 MB, contra mais de um gigabyte só do Excel. O Foglio abre uma janela utilizável em 0,24 s e usa cerca de 58 MB de memória com uma planilha vazia. Uma pasta de trabalho com 100.000 linhas e 300.000 fórmulas abre em 1,1 s e, depois de uma edição, recalcula em 16 ms.",
           "**Tudo fica no seu Mac.** O Foglio não faz conexões de rede por conta própria e não tem telemetria. Você não precisa entrar em nenhuma conta para abrir um arquivo.",
         ],
@@ -87,7 +87,7 @@ export const alternatives: Article[] = [
         heading: "Como testar o Foglio com seus próprios arquivos",
         body: [
           "[Baixe o Foglio](/download/) (7,5 MB, macOS 14 ou posterior), arraste-o para Aplicativos e abra. Como o Foglio 1.0 não é notarizado pela Apple, o macOS pede confirmação na primeira vez; a página de download mostra como. Depois abra uma cópia de uma planilha real com File ▸ Open ou clique com o botão direito num arquivo `.xlsx` e escolha Abrir Com ▸ Foglio.",
-          "Confira o que importa para você: totais, buscas, datas, formatos de número, gráficos. Guarde o original até ter certeza. Se algo parecer errado, [relate no GitHub](https://github.com/Acid236/foglio/issues) com um arquivo de exemplo.",
+          "Confira o que importa para você: totais, buscas, datas, formatos de número, gráficos. Guarde o original até ter certeza. Se algo parecer errado, [relate no GitHub](https://github.com/GetFoglio/foglio/issues) com um arquivo de exemplo.",
         ],
       },
     ],
