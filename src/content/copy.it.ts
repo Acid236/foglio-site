@@ -59,7 +59,7 @@ export const copyIt: SiteCopy = {
     compare: {
       title: "Foglio vs Excel, Numbers, LibreOffice e Fogli Google",
       description:
-        "Confronto onesto tra fogli di calcolo per Mac: prezzo, dimensioni, velocità, file xlsx, macro, tabelle pivot, collaborazione e privacy. Con le fonti.",
+        "Foglio, Excel, Numbers, LibreOffice e Fogli Google a confronto su Mac: prezzo, dimensioni, velocità, file xlsx, macro, tabelle pivot e privacy. Con le fonti.",
     },
     technology: {
       title: "Come è fatto Foglio: Swift, AppKit e Rust | Foglio",
@@ -87,7 +87,7 @@ export const copyIt: SiteCopy = {
     eyebrow: "Gratis · Open source · Nativo per macOS",
     h1: "Il foglio di calcolo gratis per Mac che apre i tuoi file Excel",
     subtitle:
-      "Foglio è un'app Mac piccola, veloce e nativa per i fogli di calcolo di tutti i giorni. Apre e salva `.xlsx`, apre `.xls`, `.ods` e `.csv`, conosce circa 500 funzioni di Excel e non costa nulla: niente abbonamento, niente account, niente pubblicità.",
+      "Foglio è un foglio di calcolo gratis per Mac: un'app piccola, veloce e nativa per i fogli di tutti i giorni. Apre e salva `.xlsx`, apre `.xls`, `.ods` e `.csv` e conosce circa 500 funzioni di Excel. Niente abbonamento, niente account, niente pubblicità.",
     badges: [
       "Gratis per sempre, MIT / Apache-2.0",
       "7,5 MB di download, si apre in 0,24 s",
@@ -157,7 +157,7 @@ export const copyIt: SiteCopy = {
       "Foglio non contiene un browser, una macchina virtuale Java o un framework multipiattaforma. Per questo si scarica in pochi secondi e si apre prima che tu muova il mouse.",
     speedNote:
       "Valori di Foglio misurati su un MacBook Air M4 (16 GB), macOS 27, Foglio 1.0, novembre 2026: mediana di più prove, memoria rilevata con `footprint`. Le dimensioni delle altre app sono quelle indicate dai rispettivi store e pagine di download a novembre 2026.",
-    freeTitle: "Gratis, e resta gratis",
+    freeTitle: "Un foglio di calcolo gratis per Mac, e resta gratis",
     freeText: [
       "Foglio non ha un prezzo, una prova a tempo, un abbonamento o una versione a pagamento. Non serve un Apple Account, un account Microsoft o un account Google per usarlo, e non c'è pubblicità.",
       "Il codice sorgente è su [GitHub](https://github.com/GetFoglio/foglio) con licenza MIT e Apache-2.0: chiunque può leggerlo, compilarlo, migliorarlo o crearne una versione propria. I tuoi fogli sono normali file `.xlsx` che si aprono in Excel, Numbers, LibreOffice e Fogli Google: nessun vincolo.",
@@ -219,7 +219,7 @@ export const copyIt: SiteCopy = {
       "Non esiste il foglio di calcolo migliore in assoluto per Mac: esiste quello adatto a ciò che fai. Questa pagina mette Foglio accanto alle quattro app tra cui gli utenti Mac scelgono più spesso, ed è volutamente onesta: dove un'altra app è migliore, la tabella lo dice.",
       "In breve: **Excel** è il più completo e il più costoso; **Numbers** è gratuito ed elegante ma converte i file Excel; **LibreOffice Calc** è gratuito e potente ma pesante e non è un'app Mac nativa; **Fogli Google** è gratuito e collaborativo ma vive nel browser e richiede un account Google. **Foglio** è gratuito, open source, leggerissimo e nativo, e modifica direttamente i file `.xlsx`, con meno funzioni avanzate di Excel.",
     ],
-    tableTitle: "Confronto punto per punto",
+    tableTitle: "Foglio, Excel, Numbers, LibreOffice e Fogli Google punto per punto",
     tableNote:
       "Prezzi e funzionalità verificati sulle pagine ufficiali dei produttori a novembre 2026 (fonti in fondo); i prezzi sono quelli di listino in Italia, IVA inclusa, e possono cambiare. I valori di Foglio sono misurati su un MacBook Air M4, macOS 27, Foglio 1.0.",
     sections: [

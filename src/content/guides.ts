@@ -133,7 +133,7 @@ const en: Article[] = [
         ],
       },
       {
-        heading: "Which option should you pick?",
+        heading: "Opening xlsx files without Excel: which option to pick",
         bullets: [
           "**Only reading:** Quick Look.",
           "**Editing and sending back, privately and offline:** a free desktop app such as Foglio or LibreOffice.",
@@ -422,7 +422,7 @@ const en: Article[] = [
         ],
       },
       {
-        heading: "Quick guide: which free app for which job",
+        heading: "Free spreadsheet apps for Mac: which one for which job",
         bullets: [
           "**Excel attachments you need to edit and send back:** Foglio, LibreOffice or Excel for the web.",
           "**A shared family or team sheet:** Google Sheets or Numbers.",
@@ -482,7 +482,7 @@ const en: Article[] = [
         bullets: pairs(LOGIC_PAIRS, "en-it"),
       },
       {
-        heading: "Lookup and dynamic arrays",
+        heading: "VLOOKUP in Italian (CERCA.VERT) and other lookup functions",
         body: [],
         bullets: pairs(LOOKUP_PAIRS, "en-it"),
       },
@@ -609,7 +609,7 @@ const it: Article[] = [
         ],
       },
       {
-        heading: "Quale soluzione scegliere?",
+        heading: "Aprire file xlsx senza Excel: quale soluzione scegliere",
         body: ["La [pagina di confronto](/compare/) mette tutte le differenze una accanto all'altra."],
         bullets: [
           "**Solo leggere:** Quick Look.",
@@ -896,7 +896,7 @@ const it: Article[] = [
         ],
       },
       {
-        heading: "In breve: quale app gratuita per quale lavoro",
+        heading: "Fogli di calcolo gratis per Mac: quale app per quale lavoro",
         body: [],
         bullets: [
           "**Allegati Excel da modificare e rimandare:** Foglio, LibreOffice o Excel per il web.",
@@ -956,7 +956,7 @@ const it: Article[] = [
         bullets: pairs(LOGIC_PAIRS, "it-en"),
       },
       {
-        heading: "Ricerca e matrici dinamiche",
+        heading: "CERCA.VERT in inglese (VLOOKUP) e altre funzioni di ricerca",
         body: [],
         bullets: pairs(LOOKUP_PAIRS, "it-en"),
       },

@@ -2,6 +2,75 @@ import type { Article } from "../types";
 
 const UPDATED = "2026-11-09";
 
+/** Excel function names: [English, French]. Names from the formula engine's fr locale (IronCalc language data). */
+type Fn = [string, string];
+
+const FN_MATH: Fn[] = [
+  ["SUM", "SOMME"],
+  ["SUMIF", "SOMME.SI"],
+  ["SUMIFS", "SOMME.SI.ENS"],
+  ["SUMPRODUCT", "SOMMEPROD"],
+  ["AVERAGE", "MOYENNE"],
+  ["AVERAGEIF", "MOYENNE.SI"],
+  ["COUNT", "NB"],
+  ["COUNTA", "NBVAL"],
+  ["COUNTBLANK", "NB.VIDE"],
+  ["COUNTIF", "NB.SI"],
+  ["COUNTIFS", "NB.SI.ENS"],
+  ["ROUND", "ARRONDI"],
+  ["ROUNDUP", "ARRONDI.SUP"],
+  ["ROUNDDOWN", "ARRONDI.INF"],
+];
+const FN_LOGIC: Fn[] = [
+  ["IF", "SI"],
+  ["IFS", "SI.CONDITIONS"],
+  ["IFERROR", "SIERREUR"],
+  ["IFNA", "SI.NON.DISP"],
+  ["AND", "ET"],
+  ["OR", "OU"],
+  ["NOT", "NON"],
+];
+const FN_LOOKUP: Fn[] = [
+  ["VLOOKUP", "RECHERCHEV"],
+  ["HLOOKUP", "RECHERCHEH"],
+  ["XLOOKUP", "RECHERCHEX"],
+  ["INDEX", "INDEX"],
+  ["MATCH", "EQUIV"],
+  ["INDIRECT", "INDIRECT"],
+  ["OFFSET", "DECALER"],
+  ["CHOOSE", "CHOISIR"],
+  ["FILTER", "FILTRE"],
+  ["SORT", "TRIER"],
+  ["UNIQUE", "UNIQUE"],
+];
+const FN_TEXT: Fn[] = [
+  ["LEFT", "GAUCHE"],
+  ["RIGHT", "DROITE"],
+  ["MID", "STXT"],
+  ["LEN", "NBCAR"],
+  ["TRIM", "SUPPRESPACE"],
+  ["UPPER", "MAJUSCULE"],
+  ["LOWER", "MINUSCULE"],
+  ["SUBSTITUTE", "SUBSTITUE"],
+  ["CONCATENATE", "CONCATENER"],
+  ["CONCAT", "CONCAT"],
+  ["TEXTJOIN", "JOINDRE.TEXTE"],
+  ["TEXT", "TEXTE"],
+  ["VALUE", "CNUM"],
+];
+const FN_DATE: Fn[] = [
+  ["TODAY", "AUJOURDHUI"],
+  ["NOW", "MAINTENANT"],
+  ["YEAR", "ANNEE"],
+  ["MONTH", "MOIS"],
+  ["DAY", "JOUR"],
+  ["WEEKDAY", "JOURSEM"],
+  ["EDATE", "MOIS.DECALER"],
+  ["EOMONTH", "FIN.MOIS"],
+  ["NETWORKDAYS", "NB.JOURS.OUVRES"],
+];
+const fnList = (list: Fn[]) => list.map(([en, fr]) => `\`${en}\` → \`${fr}\``);
+
 export const alternatives: Article[] = [
   // ───────────────────────────────────────────────────────────────────
   {
@@ -9,12 +78,12 @@ export const alternatives: Article[] = [
     meta: {
       title: "Alternative gratuite à Excel pour Mac (xlsx) | Foglio",
       description:
-        "Excel sur Mac sans abonnement Microsoft 365 ? Foglio, tableur gratuit et open source, ouvre et enregistre les xlsx. Ce qu'il fait, et ce qu'il ne fait pas.",
+        "Une alternative gratuite à Excel pour Mac, sans abonnement Microsoft 365 ? Foglio, tableur open source, ouvre et enregistre les xlsx. Ce qu'il fait, ou pas.",
     },
     h1: "Une alternative gratuite à Excel pour Mac qui ouvre vos fichiers xlsx",
     intro: [
       "Microsoft Excel pour Mac est excellent, mais il n'est pas gratuit. Pour modifier des feuilles de calcul dans l'app de bureau, il faut un abonnement Microsoft 365 (en France, Personnel coûte 99 € par an et Famille 129 €) ou une licence perpétuelle Microsoft Famille 2024 (149 € sur la boutique Microsoft française lors de notre vérification en novembre 2026). Si vous ouvrez seulement quelques fois par mois un budget, une facture ou un rapport reçu par e-mail, c'est cher payé.",
-      "Foglio est un tableur gratuit et open source pour macOS qui lit et écrit les mêmes fichiers `.xlsx`, comprend environ 500 fonctions Excel et reprend les raccourcis clavier d'Excel pour Mac. Cette page explique ce que vous gardez, ce que vous perdez, et quand Excel reste le bon choix.",
+      "Foglio est une alternative gratuite à Excel pour Mac : un tableur open source qui lit et écrit les mêmes fichiers `.xlsx`, comprend environ 500 fonctions Excel et reprend les raccourcis clavier d'Excel pour Mac. Cette page explique ce que vous gardez, ce que vous perdez, et quand Excel reste le bon choix.",
     ],
     sections: [
       {
@@ -81,7 +150,7 @@ export const alternatives: Article[] = [
         ],
       },
       {
-        heading: "Essayer Foglio avec vos propres fichiers",
+        heading: "Essayer une alternative gratuite à Excel avec vos propres fichiers",
         body: [
           "[Téléchargez Foglio](/download/) (7,5 Mo, macOS 14 ou ultérieur), glissez-le dans Applications et ouvrez-le. Comme Foglio 1.0 n'est pas notarié par Apple, macOS demande une confirmation la première fois ; la page de téléchargement explique comment faire. Ouvrez ensuite la copie d'un vrai classeur avec File ▸ Open (les menus de Foglio sont en anglais), ou faites un clic droit sur un fichier `.xlsx` et choisissez Ouvrir avec ▸ Foglio.",
           "Vérifiez ce qui compte pour vous : totaux, recherches, dates, formats de nombre, graphiques. Gardez l'original tant que vous n'êtes pas sûr de vous. Si quelque chose ne va pas, [signalez-le sur GitHub](https://github.com/GetFoglio/foglio/issues) avec un fichier d'exemple.",
@@ -146,7 +215,7 @@ export const alternatives: Article[] = [
         bullets: [
           "**Il modifie le `.xlsx` sur place.** Ouvrez un fichier Excel, modifiez-le, appuyez sur ⌘S : c'est toujours un fichier Excel. Pas d'étape d'export.",
           "**Une grille par feuille, comme Excel.** En-têtes de lignes et de colonnes, volets figés, zone Nom (tapez `B12` ou `Sheet2!A1:C9` pour y aller), onglets de feuilles que l'on peut renommer, colorer, masquer et réorganiser.",
-          "**Les formules et les noms d'Excel.** Environ 500 fonctions, dont RECHERCHEX, SOMME.SI.ENS, FILTRE, LET et LAMBDA, saisies dans la langue de votre Mac : `=SOMME(A1:A10)` sur un Mac en français, `=SOMMA(…)` sur un Mac en italien, `=SUMME(…)` sur un Mac en allemand ([exemple de correspondance italien–anglais](/guides/excel-functions-italian-english/)).",
+          "**Les formules et les noms d'Excel.** Environ 500 fonctions, dont RECHERCHEX, SOMME.SI.ENS, FILTRE, LET et LAMBDA, saisies dans la langue de votre Mac : `=SOMME(A1:A10)` sur un Mac en français, `=SOMMA(…)` sur un Mac en italien, `=SUMME(…)` sur un Mac en allemand ([fonctions Excel en français et en anglais](/guides/excel-functions-italian-english/)).",
           "**Les raccourcis d'Excel pour Mac.** ⌘1, ⌘D, F4, ⇧⌘T, ⌥⇧⌘V et des dizaines d'autres se comportent comme dans Excel.",
           "**Les fichiers qui posent problème à Numbers.** Foglio ouvre les anciens `.xls`, les `.xlsb` binaires et les `.ods` de LibreOffice, ainsi que les CSV dans tous les encodages courants, avec détection automatique du séparateur. Il affiche même les vieux cliparts EMF/WMF contenus dans les fichiers Office.",
         ],
@@ -445,7 +514,7 @@ export const guides: Article[] = [
         ],
       },
       {
-        heading: "Quelle option choisir ?",
+        heading: "Ouvrir un xlsx sur Mac sans Excel : quelle option choisir ?",
         bullets: [
           "**Seulement lire :** Coup d'œil.",
           "**Modifier et renvoyer, en privé et hors ligne :** une app de bureau gratuite comme Foglio ou LibreOffice.",
@@ -734,7 +803,7 @@ export const guides: Article[] = [
         ],
       },
       {
-        heading: "En bref : quelle app gratuite pour quel usage",
+        heading: "Tableurs gratuits pour Mac : lequel pour quel usage",
         bullets: [
           "**Des pièces jointes Excel à modifier et renvoyer :** Foglio, LibreOffice ou Excel pour le web.",
           "**Une feuille partagée en famille ou en équipe :** Google Sheets ou Numbers.",
@@ -773,142 +842,87 @@ export const guides: Article[] = [
   {
     slug: "excel-functions-italian-english",
     meta: {
-      title: "Noms des fonctions Excel en italien et en anglais | Foglio",
+      title: "Fonctions Excel français–anglais : la liste | Foglio",
       description:
-        "VLOOKUP se dit CERCA.VERT, SUM se dit SOMMA, IF se dit SE. Liste pratique des fonctions Excel en italien et en anglais, et pourquoi le point-virgule.",
+        "RECHERCHEV se dit VLOOKUP, SOMME se dit SUM, SI se dit IF : plus de 50 fonctions Excel en français et en anglais, et pourquoi on utilise le point-virgule.",
     },
-    h1: "Les noms des fonctions Excel en italien et en anglais",
+    h1: "Les fonctions Excel en français et en anglais",
     intro: [
-      "Excel traduit les noms de ses fonctions. Sur un Mac en italien, `SUM` devient `SOMMA`, `VLOOKUP` devient `CERCA.VERT` et `IF` devient `SE`, et les arguments sont séparés par des points-virgules, comme en français (où l'on écrit `SOMME`, `RECHERCHEV` et `SI`). C'est parfait pour les italophones, mais déroutant pour qui suit un tutoriel en anglais ou travaille avec des collègues italiens.",
-      "Voici une liste pratique des fonctions les plus utilisées dans les deux langues, suivie des règles qui piègent souvent : séparateurs, virgule décimale, et ce qui se passe quand un fichier change de langue.",
+      "Excel traduit les noms de ses fonctions. Sur un Mac en français, `VLOOKUP` devient `RECHERCHEV`, `SUM` devient `SOMME` et `IF` devient `SI`, et les arguments sont séparés par des points-virgules. Pratique tant que tout se passe en français, déroutant dès que l'on suit un tutoriel en anglais, copie une formule trouvée sur un forum ou travaille avec des collègues à l'étranger.",
+      "Voici les fonctions Excel les plus utilisées en anglais et en français, classées par thème, suivies des règles qui piègent souvent : séparateurs, virgule décimale, et ce qui se passe quand un fichier change de langue.",
     ],
     sections: [
       {
-        heading: "Mathématiques et statistiques",
+        heading: "Mathématiques et statistiques : SOMME, NB.SI…",
         body: [],
-        bullets: [
-          "`SUM` → `SOMMA`",
-          "`SUMIF` → `SOMMA.SE`",
-          "`SUMIFS` → `SOMMA.PIÙ.SE`",
-          "`SUMPRODUCT` → `MATR.SOMMA.PRODOTTO`",
-          "`AVERAGE` → `MEDIA`",
-          "`AVERAGEIF` → `MEDIA.SE`",
-          "`COUNT` → `CONTA.NUMERI`",
-          "`COUNTA` → `CONTA.VALORI`",
-          "`COUNTBLANK` → `CONTA.VUOTE`",
-          "`COUNTIF` → `CONTA.SE`",
-          "`COUNTIFS` → `CONTA.PIÙ.SE`",
-          "`ROUND` → `ARROTONDA`",
-          "`ROUNDUP` → `ARROTONDA.PER.ECC`",
-          "`ROUNDDOWN` → `ARROTONDA.PER.DIF`",
-        ],
+        bullets: fnList(FN_MATH),
       },
       {
-        heading: "Logique",
-        body: [],
-        bullets: [
-          "`IF` → `SE`",
-          "`IFS` → `PIÙ.SE`",
-          "`IFERROR` → `SE.ERRORE`",
-          "`IFNA` → `SE.NON.DISP.`",
-          "`AND` → `E`",
-          "`OR` → `O`",
-          "`NOT` → `NON`",
-        ],
+        heading: "Logique : SI, ET, OU",
+        body: ["Les valeurs logiques s'écrivent `VRAI` et `FAUX` en français (`TRUE` et `FALSE` en anglais)."],
+        bullets: fnList(FN_LOGIC),
       },
       {
-        heading: "Recherche et tableaux dynamiques",
+        heading: "RECHERCHEV, RECHERCHEX et autres fonctions de recherche",
         body: [],
-        bullets: [
-          "`VLOOKUP` → `CERCA.VERT`",
-          "`HLOOKUP` → `CERCA.ORIZZ`",
-          "`XLOOKUP` → `CERCA.X`",
-          "`INDEX` → `INDICE`",
-          "`MATCH` → `CONFRONTA`",
-          "`INDIRECT` → `INDIRETTO`",
-          "`OFFSET` → `SCARTO`",
-          "`FILTER` → `FILTRO`",
-          "`SORT` → `ORDINA`",
-        ],
+        bullets: fnList(FN_LOOKUP),
       },
       {
         heading: "Texte",
         body: [],
-        bullets: [
-          "`LEFT` → `SINISTRA`",
-          "`RIGHT` → `DESTRA`",
-          "`MID` → `STRINGA.ESTRAI`",
-          "`LEN` → `LUNGHEZZA`",
-          "`TRIM` → `ANNULLA.SPAZI`",
-          "`UPPER` → `MAIUSC`",
-          "`LOWER` → `MINUSC`",
-          "`SUBSTITUTE` → `SOSTITUISCI`",
-          "`CONCATENATE` → `CONCATENA`",
-          "`TEXTJOIN` → `TESTO.UNISCI`",
-          "`TEXT` → `TESTO`",
-          "`VALUE` → `VALORE`",
-        ],
+        bullets: fnList(FN_TEXT),
       },
       {
-        heading: "Dates",
-        body: [
-          "Beaucoup de fonctions gardent le même nom dans les deux langues, par exemple `MAX`, `MIN`, `LET` et `LAMBDA`.",
-        ],
-        bullets: [
-          "`TODAY` → `OGGI`",
-          "`NOW` → `ADESSO`",
-          "`YEAR` → `ANNO`",
-          "`MONTH` → `MESE`",
-          "`DAY` → `GIORNO`",
-          "`WEEKDAY` → `GIORNO.SETTIMANA`",
-          "`EDATE` → `DATA.MESE`",
-          "`EOMONTH` → `FINE.MESE`",
-          "`DATEDIF` → `DATA.DIFF`",
-          "`NETWORKDAYS` → `GIORNI.LAVORATIVI.TOT`",
-        ],
+        heading: "Dates et heures",
+        body: ["Certaines fonctions ont le même nom dans toutes les langues, par exemple `MAX`, `MIN`, `LET`, `LAMBDA` et `DATEDIF`."],
+        bullets: fnList(FN_DATE),
       },
       {
         heading: "Points-virgules et virgule décimale",
         body: [
-          "Comme la France, l'Italie écrit un et demi `1,5`. La virgule étant déjà prise, Excel en italien sépare les arguments des fonctions par un **point-virgule** : `=SE(A1>1,5;\"sì\";\"no\")` est la forme italienne de `=IF(A1>1.5,\"yes\",\"no\")`, et en français on écrirait `=SI(A1>1,5;\"oui\";\"non\")`. L'Allemagne, l'Espagne et la majeure partie de l'Europe continentale fonctionnent de la même façon.",
-          "C'est la région choisie dans les réglages de votre Mac qui décide, pas seulement la langue : un Mac en anglais réglé sur une région italienne ou française utilise aussi la virgule décimale.",
+          "En France, un et demi s'écrit `1,5`. La virgule étant déjà prise, Excel en français sépare les arguments des fonctions par un **point-virgule** : `=SI(A1>1,5;\"oui\";\"non\")` est la forme française de `=IF(A1>1.5,\"yes\",\"no\")`. La Belgique, l'Italie, l'Allemagne, l'Espagne et la majeure partie de l'Europe continentale fonctionnent de la même façon.",
+          "C'est la région choisie dans les réglages de votre Mac qui décide du séparateur, pas seulement la langue : un Mac en anglais réglé sur la région France utilise aussi la virgule décimale.",
         ],
       },
       {
-        heading: "Les fichiers se moquent de la langue dans laquelle vous tapez",
+        heading: "Passer une formule anglaise dans Excel en français",
         body: [
-          "Un fichier `.xlsx` enregistre toujours les formules en anglais, avec des virgules : `SUM(A1:A10)`, pas `SOMMA` ni `SOMME`. Chaque copie d'Excel les traduit dans la langue de son utilisateur à l'affichage. Un collègue italien, un français et un américain peuvent donc partager le même fichier sans que rien ne casse, tant que leurs apps respectent cette règle.",
-          "Copier-coller le texte d'une formule, c'est autre chose : coller `=VLOOKUP(A2,B:C,2,FALSE)` depuis un site en anglais dans Excel en italien donne une erreur. Traduisez les noms avec la liste ci-dessus et remplacez les virgules par des points-virgules.",
+          "Un fichier `.xlsx` enregistre toujours les formules en anglais, avec des virgules : `SUM(A1:A10)`, pas `SOMME`. Chaque copie d'Excel les traduit dans la langue de son utilisateur à l'affichage. Un fichier créé dans un Excel américain s'ouvre donc sans problème dans un Excel français, avec les noms français.",
+          "Copier-coller le texte d'une formule, c'est autre chose : coller `=VLOOKUP(A2,B:C,2,FALSE)` depuis un site en anglais dans Excel en français donne une erreur. Traduisez les noms avec la liste ci-dessus, remplacez les virgules par des points-virgules et `FALSE` par `FAUX` : `=RECHERCHEV(A2;B:C;2;FAUX)`.",
         ],
       },
       {
-        heading: "Les formules localisées dans Foglio",
+        heading: "Les formules en français dans Foglio",
         body: [
-          "[Foglio](/), le tableur gratuit et open source pour Mac, suit la même convention qu'Excel. Sur un Mac en italien, vous tapez `=SOMMA(A1:A10;B2)`, `CERCA.VERT` ou `SE.ERRORE` avec des points-virgules et la virgule décimale, avec une saisie semi-automatique accompagnée de descriptions en italien ; sur le disque, le fichier garde la forme anglaise d'Excel. Le français (`SOMME`, `RECHERCHEV`), l'allemand (`SUMME`, `SVERWEIS`) et l'espagnol (`SUMA`, `BUSCARV`) fonctionnent de la même façon, et l'explorateur de fonctions liste les ~500 fonctions sous leur nom localisé.",
-          "Google Sheets et LibreOffice localisent aussi les noms de fonctions selon vos réglages. Numbers également. Si vous suivez des tutoriels en anglais, l'affichage des formules (Show Formulas, menu View) dans Foglio vous aide à comparer ce que vous avez tapé avec ce que montre le tutoriel.",
+          "[Foglio](/), le tableur gratuit et open source pour Mac, suit la même convention qu'Excel. Sur un Mac en français, vous tapez `=SOMME(A1:A10;B2)`, `RECHERCHEV` ou `SIERREUR` avec des points-virgules et la virgule décimale ; sur le disque, le fichier garde la forme anglaise d'Excel. L'italien (`SOMMA`, `CERCA.VERT`), l'allemand (`SUMME`, `SVERWEIS`) et l'espagnol (`SUMA`, `BUSCARV`) fonctionnent de la même façon, et l'explorateur de fonctions (Insert Function) liste les ~500 fonctions sous leur nom localisé.",
+          "L'interface de Foglio est en anglais et en italien, et les courtes descriptions des fonctions dans la saisie semi-automatique sont en anglais : en français, ce sont les formules qui suivent votre langue. Si vous suivez des tutoriels en anglais, l'affichage des formules (Show Formulas, menu View) vous aide à comparer ce que vous avez tapé avec le tutoriel. Google Sheets, LibreOffice et Numbers localisent aussi les noms de fonctions selon vos réglages.",
         ],
       },
     ],
     faq: [
       {
-        q: "Comment dit-on VLOOKUP dans Excel en italien ?",
-        a: "`CERCA.VERT` (en français : `RECHERCHEV`). Ses arguments sont les mêmes, séparés par des points-virgules : `=CERCA.VERT(A2;B:C;2;FALSO)`. XLOOKUP se dit `CERCA.X`.",
+        q: "Comment dit-on RECHERCHEV en anglais ?",
+        a: "`VLOOKUP`. Les arguments sont les mêmes, mais séparés par des virgules dans Excel en anglais : `=VLOOKUP(A2,B:C,2,FALSE)` au lieu de `=RECHERCHEV(A2;B:C;2;FAUX)`. RECHERCHEX se dit `XLOOKUP` et RECHERCHEH `HLOOKUP`.",
       },
       {
-        q: "Pourquoi ma formule donne-t-elle une erreur dans Excel en italien ?",
-        a: "Généralement parce qu'elle utilise des noms anglais ou des virgules entre les arguments. Utilisez les noms italiens et des points-virgules, et écrivez les décimales avec une virgule.",
+        q: "Comment dit-on NB.SI en anglais ?",
+        a: "`COUNTIF`. De même, NB.SI.ENS est `COUNTIFS`, SOMME.SI est `SUMIF`, SIERREUR est `IFERROR` et NBVAL est `COUNTA`.",
       },
       {
-        q: "Puis-je passer Excel aux noms de fonctions anglais ?",
-        a: "Excel suit la langue d'Office et de votre système. Foglio suit la langue et la région de votre Mac ; les changer dans Réglages Système ▸ Général ▸ Langue et région change aussi les noms des fonctions.",
+        q: "Pourquoi une formule anglaise donne-t-elle une erreur dans Excel en français ?",
+        a: "Généralement parce qu'elle utilise des noms anglais ou des virgules entre les arguments. Utilisez les noms français, des points-virgules entre les arguments et la virgule décimale.",
       },
       {
-        q: "Un fichier créé dans Excel en italien marchera-t-il dans Excel en anglais ?",
-        a: "Oui. Le fichier enregistre les formules en anglais en interne, donc chaque version d'Excel, et Foglio, les affiche dans sa propre langue.",
+        q: "Puis-je utiliser les noms de fonctions anglais ?",
+        a: "Excel suit la langue d'Office et de votre système. Foglio suit la langue et la région de votre Mac : si vous les passez en anglais dans Réglages Système ▸ Général ▸ Langue et région, vous tapez aussi les fonctions en anglais.",
+      },
+      {
+        q: "Un fichier créé avec Excel en français fonctionne-t-il dans Excel en anglais ?",
+        a: "Oui. Le fichier enregistre les formules en anglais en interne, donc chaque version d'Excel, et Foglio aussi, les affiche dans sa propre langue.",
       },
     ],
     updated: UPDATED,
-    cardTitle: "Fonctions Excel : italien ↔ anglais",
-    cardText: "Environ 50 noms de fonctions Excel traduits, de SOMMA à CERCA.VERT, et pourquoi les formules utilisent le point-virgule.",
+    cardTitle: "Fonctions Excel : français ↔ anglais",
+    cardText: "Plus de 50 noms de fonctions Excel traduits, de SOMME à RECHERCHEV, et pourquoi les formules françaises utilisent le point-virgule.",
   },
 ];

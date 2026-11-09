@@ -59,7 +59,7 @@ export const copyEs: SiteCopy = {
     compare: {
       title: "Foglio frente a Excel, Numbers, LibreOffice y Sheets",
       description:
-        "Comparativa honesta de hojas de cálculo para Mac: precio, tamaño, velocidad, xlsx, macros, tablas dinámicas, colaboración y privacidad. Con fuentes.",
+        "Foglio frente a Excel, Numbers, LibreOffice y Google Sheets en Mac: precio, tamaño, velocidad, xlsx, macros, tablas dinámicas y privacidad. Con fuentes.",
     },
     technology: {
       title: "Cómo está hecho Foglio: Swift, AppKit y Rust | Foglio",
@@ -87,7 +87,7 @@ export const copyEs: SiteCopy = {
     eyebrow: "Gratis · Código abierto · Nativa para macOS",
     h1: "La hoja de cálculo gratis para Mac que abre tus archivos de Excel",
     subtitle:
-      "Foglio es una app nativa para Mac, pequeña y rápida, para las hojas de cálculo de todos los días. Abre y guarda `.xlsx`, abre `.xls`, `.ods` y `.csv`, entiende unas 500 funciones de Excel y no cuesta nada: sin suscripción, sin cuenta y sin anuncios.",
+      "Foglio es una hoja de cálculo gratis para Mac: una app nativa, pequeña y rápida para el día a día. Abre y guarda `.xlsx`, abre `.xls`, `.ods` y `.csv` y entiende unas 500 funciones de Excel. Sin suscripción, sin cuenta y sin anuncios.",
     badges: [
       "Gratis para siempre, MIT / Apache-2.0",
       "Descarga de 7,5 MB, se abre en 0,24 s",
@@ -157,7 +157,7 @@ export const copyEs: SiteCopy = {
       "Foglio no lleva dentro un motor de navegador, ni un runtime de Java, ni un framework empaquetado. Por eso se descarga en segundos y se abre antes de que muevas el ratón.",
     speedNote:
       "Datos de Foglio medidos en un MacBook Air M4 (16 GB), macOS 27, Foglio 1.0, noviembre de 2026: medianas de varias ejecuciones, memoria según `footprint`. Los tamaños de las demás apps son los de descarga o instalación que indicaban sus tiendas y páginas de descarga en noviembre de 2026.",
-    freeTitle: "Gratis, y seguirá siéndolo",
+    freeTitle: "Una hoja de cálculo gratis para Mac, y seguirá siéndolo",
     freeText: [
       "Foglio no tiene precio, ni periodo de prueba, ni suscripción, ni versión de pago. No necesitas una cuenta de Apple, de Microsoft ni de Google para usarla, y no hay anuncios.",
       "El código fuente está en [GitHub](https://github.com/GetFoglio/foglio) con licencias MIT y Apache-2.0, así que cualquiera puede leerlo, compilarlo, corregirlo o crear su propio fork. Tus hojas de cálculo son archivos `.xlsx` estándar que se abren en Excel, Numbers, LibreOffice y Google Sheets: nada te ata.",
@@ -219,7 +219,7 @@ export const copyEs: SiteCopy = {
       "No existe la mejor hoja de cálculo para Mac. Existe la que encaja con lo que haces. Esta página pone a Foglio junto a las cuatro apps entre las que más suelen elegir los usuarios de Mac, y es honesta a propósito: donde otra app es mejor, la tabla lo dice.",
       "En resumen: **Excel** es la más completa y la más cara; **Numbers** es gratis y bonita, pero convierte los archivos de Excel; **LibreOffice Calc** es gratis y potente, pero pesada y no es una app nativa de Mac; **Google Sheets** es gratis y colaborativa, pero vive en el navegador y exige una cuenta de Google. **Foglio** es gratis, de código abierto, ligerísima y nativa, y edita `.xlsx` directamente, con menos funciones avanzadas que Excel.",
     ],
-    tableTitle: "Comparativa lado a lado",
+    tableTitle: "Foglio, Excel, Numbers, LibreOffice y Google Sheets, lado a lado",
     tableNote:
       "Precios y funciones comprobados en las páginas oficiales de cada fabricante en noviembre de 2026 (fuentes más abajo); los precios de Excel y Numbers son los de España, IVA incluido, y pueden cambiar. Los datos de Foglio se midieron en un MacBook Air M4, macOS 27, Foglio 1.0.",
     sections: [

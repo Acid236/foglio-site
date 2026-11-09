@@ -9,12 +9,12 @@ const en: Article[] = [
     meta: {
       title: "Free Excel Alternative for Mac That Opens xlsx | Foglio",
       description:
-        "Need Excel on your Mac without a Microsoft 365 subscription? Foglio is a free, open-source app that opens and saves xlsx files. What it can and cannot do.",
+        "Looking for a free Excel alternative for Mac, without a Microsoft 365 subscription? Foglio is open source and opens and saves xlsx files. What it can't do.",
     },
     h1: "A free Excel alternative for Mac that still opens your xlsx files",
     intro: [
       "Microsoft Excel for Mac is excellent, but it is not free. To edit spreadsheets in the desktop app you need a Microsoft 365 subscription (Personal is $99.99 a year in the US, Family $129.99) or a one-time Office Home 2024 license ($179.99 on Microsoft's store when we checked in November 2026). If you only open a budget, an invoice or a report someone emailed you a few times a month, that is a lot to pay.",
-      "Foglio is a free, open-source spreadsheet app for macOS that reads and writes the same `.xlsx` files, understands about 500 Excel functions and uses Excel for Mac's keyboard shortcuts. This page explains what you keep, what you lose, and when Excel is still the right choice.",
+      "Foglio is a free Excel alternative for Mac: an open-source spreadsheet app that reads and writes the same `.xlsx` files, understands about 500 Excel functions and uses Excel for Mac's keyboard shortcuts. This page explains what you keep, what you lose, and when Excel is still the right choice.",
     ],
     sections: [
       {
@@ -81,7 +81,7 @@ const en: Article[] = [
         ],
       },
       {
-        heading: "How to try Foglio with your own files",
+        heading: "How to try a free Excel alternative with your own files",
         body: [
           "[Download Foglio](/download/) (7.5 MB, macOS 14 or later), drag it to Applications and open it. Because Foglio 1.0 is not notarized by Apple, macOS asks for confirmation the first time; the download page shows how. Then open a copy of a real workbook with File ▸ Open, or right-click an `.xlsx` file and choose Open With ▸ Foglio.",
           "Check the things that matter to you: totals, lookups, dates, number formats, charts. Keep the original until you are confident. If something looks wrong, please [report it on GitHub](https://github.com/GetFoglio/foglio/issues) with a sample file.",
@@ -387,12 +387,12 @@ const it: Article[] = [
     meta: {
       title: "Alternativa gratuita a Excel per Mac | Foglio",
       description:
-        "Vuoi Excel sul Mac senza abbonamento a Microsoft 365? Foglio è un'app gratuita e open source che apre e salva i file xlsx. Cosa sa fare e cosa no.",
+        "Cerchi un'alternativa gratuita a Excel per Mac, senza abbonamento a Microsoft 365? Foglio è open source, apre e salva i file xlsx. Cosa sa fare e cosa no.",
     },
     h1: "Un'alternativa gratuita a Excel per Mac che apre i tuoi file xlsx",
     intro: [
       "Microsoft Excel per Mac è ottimo, ma non è gratis. Per modificare i fogli nell'app desktop serve un abbonamento a Microsoft 365 (in Italia Personal costa 99 € all'anno, Family 129 €) oppure una licenza a vita di Office Home 2024 (149 € sullo store Microsoft a novembre 2026). Se ti capita di aprire un bilancio, una fattura o un report ricevuto per email qualche volta al mese, è una spesa importante.",
-      "Foglio è un'app per fogli di calcolo gratuita e open source per macOS: legge e scrive gli stessi file `.xlsx`, conosce circa 500 funzioni di Excel, accetta le formule in italiano e usa le scorciatoie da tastiera di Excel per Mac. Questa pagina spiega cosa mantieni, cosa perdi e quando Excel resta la scelta giusta.",
+      "Foglio è un'alternativa gratuita a Excel per Mac, open source: legge e scrive gli stessi file `.xlsx`, conosce circa 500 funzioni di Excel, accetta le formule in italiano e usa le scorciatoie da tastiera di Excel per Mac. Questa pagina spiega cosa mantieni, cosa perdi e quando Excel resta la scelta giusta.",
     ],
     sections: [
       {
@@ -457,7 +457,7 @@ const it: Article[] = [
         ],
       },
       {
-        heading: "Come provare Foglio con i tuoi file",
+        heading: "Come provare un'alternativa gratuita a Excel con i tuoi file",
         body: [
           "[Scarica Foglio](/download/) (7,5 MB, macOS 14 o successivo), trascinalo in Applicazioni e aprilo. Poiché Foglio 1.0 non è notarizzato da Apple, la prima volta macOS chiede conferma: la pagina di download spiega come fare. Poi apri una copia di una cartella di lavoro reale con Archivio ▸ Apri, oppure fai clic destro su un file `.xlsx` e scegli Apri con ▸ Foglio.",
           "Controlla le cose che contano per te: totali, ricerche, date, formati numerici, grafici. Conserva l'originale finché non sei sicuro. Se qualcosa non torna, [segnalalo su GitHub](https://github.com/GetFoglio/foglio/issues) allegando un file di esempio.",
@@ -476,6 +476,10 @@ const it: Article[] = [
       {
         q: "Foglio usa le stesse scorciatoie di Excel per Mac?",
         a: "Quasi tutte: ⌘1 Formato celle, ⌘D / ⌘R per riempire, F4 per i riferimenti assoluti, ⇧⌘T Somma automatica, ⌥⇧⌘V incolla valori, ⌃; inserisce la data, ⌥↓ apre un elenco di convalida, e molte altre. Il README su GitHub ha l'elenco completo.",
+      },
+      {
+        q: "Foglio è veloce come Excel con i file grandi?",
+        a: "Non abbiamo misurato Excel, quindi non diciamo di batterlo. Sul nostro Mac di prova Foglio apre una cartella di lavoro da 100.000 righe con 300.000 formule in 1,1 s e ricalcola dopo una modifica in 16 ms: in pratica, all'istante.",
       },
       {
         q: "Posso usare Foglio per lavoro?",
