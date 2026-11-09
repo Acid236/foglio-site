@@ -1,4 +1,4 @@
-import type { AppId, BaseLocale, ComparisonSource, RawComparisonRow } from "./types";
+import type { AppId, BaseLocale, ComparisonSource, Locale, RawComparisonRow } from "./types";
 
 export const comparisonApps: Record<AppId, { name: string; maker: string }> = {
   foglio: { name: "Foglio", maker: "Open source" },
@@ -371,19 +371,57 @@ export const rawComparisonRows: RawComparisonRow[] = [
   },
 ];
 
+/**
+ * Official price pages for the market each language quotes (checked November 2026), listed first
+ * in that language's sources. Keep in sync with the price cells in content/<locale>/comparison.ts.
+ */
+export const comparisonPriceSources: Record<Locale, ComparisonSource[]> = {
+  en: [
+    {
+      label: "Microsoft: compare Microsoft 365 plans and Office Home 2024 (US prices)",
+      url: "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+    },
+    { label: "Apple: Apple Creator Studio ($12.99/month or $129/year, US)", url: "https://www.apple.com/apple-creator-studio/" },
+  ],
+  it: [
+    {
+      label: "Microsoft Italia: confronta i piani Microsoft 365 e Office Home 2024 (prezzi in euro)",
+      url: "https://www.microsoft.com/it-it/microsoft-365/buy/compare-all-microsoft-365-products",
+    },
+    { label: "Apple Italia: Apple Creator Studio (12,99 € al mese o 129 € all'anno)", url: "https://www.apple.com/it/apple-creator-studio/" },
+  ],
+  es: [
+    {
+      label: "Microsoft España: compara los planes de Microsoft 365 y Office Hogar 2024 (precios en euros)",
+      url: "https://www.microsoft.com/es-es/microsoft-365/buy/compare-all-microsoft-365-products",
+    },
+    { label: "Apple España: Apple Creator Studio (12,99 € al mes o 129 € al año)", url: "https://www.apple.com/es/apple-creator-studio/" },
+  ],
+  fr: [
+    {
+      label: "Microsoft France : comparer les offres Microsoft 365 et Microsoft Famille 2024 (prix en euros)",
+      url: "https://www.microsoft.com/fr-fr/microsoft-365/buy/compare-all-microsoft-365-products",
+    },
+    { label: "Apple France : Apple Creator Studio (12,99 € par mois ou 129 € par an)", url: "https://www.apple.com/fr/apple-creator-studio/" },
+  ],
+  de: [
+    {
+      label: "Microsoft Deutschland: Microsoft-365-Pläne und Office Home 2024 vergleichen (Preise in Euro)",
+      url: "https://www.microsoft.com/de-de/microsoft-365/buy/compare-all-microsoft-365-products",
+    },
+    { label: "Apple Deutschland: Apple Creator Studio (12,99 € pro Monat oder 129 € pro Jahr)", url: "https://www.apple.com/de/apple-creator-studio/" },
+  ],
+  pt: [
+    {
+      label: "Microsoft Brasil: compare os planos do Microsoft 365 e o Office Home 2024 (preços em reais)",
+      url: "https://www.microsoft.com/pt-br/microsoft-365/buy/compare-all-microsoft-365-products",
+    },
+    { label: "Apple Brasil: Apple Creator Studio (R$ 39,90 por mês ou R$ 399 por ano)", url: "https://www.apple.com/br/apple-creator-studio/" },
+  ],
+};
+
+/** Sources shared by every language (sizes, features, privacy). */
 export const comparisonSources: ComparisonSource[] = [
-  {
-    label: "Microsoft: compare Microsoft 365 plans and Office Home 2024 (US prices)",
-    url: "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
-  },
-  {
-    label: "Microsoft Italia: confronta i piani Microsoft 365 e Office Home 2024 (prezzi in euro)",
-    url: "https://www.microsoft.com/it-it/microsoft-365/buy/compare-all-microsoft-365-products",
-  },
-  {
-    label: "Telefonino.net: Apple Creator Studio in Italia, 12,99 €/mese o 129 €/anno",
-    url: "https://www.telefonino.net/notizie/apple-creator-studio-la-rivoluzione-creativa-parte-da-1299-euro-al-mese/",
-  },
   {
     label: "Mac App Store: Microsoft Excel (size, requirements, in-app purchases)",
     url: "https://apps.apple.com/us/app/microsoft-excel/id462058435?mt=12",

@@ -15,7 +15,7 @@ export const alternatives: Article[] = [
     },
     h1: "Uma alternativa gratuita ao Excel para Mac que abre seus arquivos xlsx",
     intro: [
-      "O Microsoft Excel para Mac é excelente, mas não é grátis. Para editar planilhas no app de desktop você precisa de uma assinatura do Microsoft 365 (nos EUA, o Personal custa US$ 99,99 por ano e o Family US$ 129,99) ou de uma licença avulsa do Office Home 2024 (US$ 179,99 na loja americana da Microsoft quando conferimos, em novembro de 2026; no Brasil os preços são outros). Se você só abre um orçamento, uma nota ou um relatório que alguém mandou por e-mail algumas vezes por mês, é muito dinheiro.",
+      "O Microsoft Excel para Mac é excelente, mas não é grátis. Para editar planilhas no app de desktop você precisa de uma assinatura do Microsoft 365 (no Brasil, o Personal custa R$ 509 por ano e o Family R$ 599) ou de uma licença avulsa do Office Home 2024 (R$ 899 na loja da Microsoft no Brasil quando conferimos, em novembro de 2026). Se você só abre um orçamento, uma nota ou um relatório que alguém mandou por e-mail algumas vezes por mês, é muito dinheiro.",
       "O Foglio é um app de planilha grátis e de código aberto para macOS que lê e grava os mesmos arquivos `.xlsx`, entende cerca de 500 funções do Excel e usa os atalhos de teclado do Excel para Mac. Esta página explica o que você mantém, o que perde e quando o Excel ainda é a escolha certa.",
     ],
     sections: [

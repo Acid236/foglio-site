@@ -13,7 +13,7 @@ export const alternatives: Article[] = [
     },
     h1: "Une alternative gratuite à Excel pour Mac qui ouvre vos fichiers xlsx",
     intro: [
-      "Microsoft Excel pour Mac est excellent, mais il n'est pas gratuit. Pour modifier des feuilles de calcul dans l'app de bureau, il faut un abonnement Microsoft 365 (aux États-Unis, Personnel coûte 99,99 $ par an et Famille 129,99 $) ou une licence perpétuelle Office Famille 2024 (179,99 $ sur la boutique Microsoft américaine lors de notre vérification en novembre 2026 ; les prix en France diffèrent). Si vous ouvrez seulement quelques fois par mois un budget, une facture ou un rapport reçu par e-mail, c'est cher payé.",
+      "Microsoft Excel pour Mac est excellent, mais il n'est pas gratuit. Pour modifier des feuilles de calcul dans l'app de bureau, il faut un abonnement Microsoft 365 (en France, Personnel coûte 99 € par an et Famille 129 €) ou une licence perpétuelle Microsoft Famille 2024 (149 € sur la boutique Microsoft française lors de notre vérification en novembre 2026). Si vous ouvrez seulement quelques fois par mois un budget, une facture ou un rapport reçu par e-mail, c'est cher payé.",
       "Foglio est un tableur gratuit et open source pour macOS qui lit et écrit les mêmes fichiers `.xlsx`, comprend environ 500 fonctions Excel et reprend les raccourcis clavier d'Excel pour Mac. Cette page explique ce que vous gardez, ce que vous perdez, et quand Excel reste le bon choix.",
     ],
     sections: [

@@ -30,7 +30,7 @@ export const guides: Record<Locale, Article[]> = {
   pt: ptGuides,
 };
 
-export { comparisonApps, comparisonChecked, comparisonSources } from "./comparison";
+export { comparisonApps, comparisonChecked, comparisonPriceSources, comparisonSources } from "./comparison";
 export { comparisonRows } from "./comparison-i18n";
 export * from "./facts";
 export * from "./types";
