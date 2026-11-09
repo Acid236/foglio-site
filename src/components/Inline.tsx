@@ -3,14 +3,15 @@ import type { ReactNode } from "react";
 import type { Locale } from "@/content/types";
 import { href } from "@/lib/i18n";
 
-// **bold**, `code`, [text](url)
-const TOKEN = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)\s]+\))/g;
+// **bold**, *italic* (menu and command names), `code`, [text](url)
+const TOKEN = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[[^\]]+\]\([^)\s]+\))/g;
 
 /** Renders the content model's tiny inline markup (see content/types.ts). */
 export function Inline({ text, locale }: { text: string; locale: Locale }) {
   const parts = text.split(TOKEN);
   const out: ReactNode[] = parts.map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) return <strong key={i}>{part.slice(2, -2)}</strong>;
+    if (part.length > 2 && part.startsWith("*") && part.endsWith("*")) return <em key={i}>{part.slice(1, -1)}</em>;
     if (part.startsWith("`") && part.endsWith("`")) return <code key={i}>{part.slice(1, -1)}</code>;
     const link = /^\[([^\]]+)\]\(([^)\s]+)\)$/.exec(part);
     if (link) {
@@ -31,6 +32,7 @@ export function Inline({ text, locale }: { text: string; locale: Locale }) {
 export function plain(text: string): string {
   return text
     .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*\s][^*]*)\*/g, "$1")
     .replace(/`([^`]+)`/g, "$1")
     .replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1");
 }

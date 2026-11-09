@@ -39,6 +39,14 @@ export const copyDe: SiteCopy = {
     yes: "Ja",
     no: "Nein",
     partial: "Teilweise",
+    home: "Foglio-Startseite",
+    menu: "Menü",
+    openSource: "Open Source",
+    releases: "Versionen",
+    issues: "Problem melden",
+    moreGuides: "Weitere Anleitungen",
+    moreAlternatives: "Weitere Alternativen",
+    screenshotAlt: "Foglio auf dem Mac mit geöffneter Excel-Datei (englische Oberfläche): eine monatliche Umsatztabelle mit Umsatz, Kosten, Gewinn und Marge, Summenzeile und Säulendiagramm",
   },
 
   meta: {

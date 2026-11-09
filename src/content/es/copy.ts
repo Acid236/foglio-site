@@ -39,6 +39,14 @@ export const copyEs: SiteCopy = {
     yes: "Sí",
     no: "No",
     partial: "En parte",
+    home: "Página de inicio de Foglio",
+    menu: "Menú",
+    openSource: "Código abierto",
+    releases: "Versiones",
+    issues: "Informar de un problema",
+    moreGuides: "Más guías",
+    moreAlternatives: "Otras alternativas",
+    screenshotAlt: "Foglio en un Mac con un archivo de Excel abierto (interfaz en inglés): una hoja de ventas mensuales con ingresos, costes, beneficio y margen, fila de totales y un gráfico de columnas",
   },
 
   meta: {

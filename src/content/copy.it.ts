@@ -39,6 +39,14 @@ export const copyIt: SiteCopy = {
     yes: "Sì",
     no: "No",
     partial: "In parte",
+    home: "Pagina iniziale di Foglio",
+    menu: "Menu",
+    openSource: "Open source",
+    releases: "Versioni",
+    issues: "Segnala un problema",
+    moreGuides: "Altre guide",
+    moreAlternatives: "Altre alternative",
+    screenshotAlt: "Foglio su Mac con un file Excel aperto: un foglio delle vendite mensili con ricavi, costi, utile e margine, la riga dei totali e un grafico a colonne ricavi e costi",
   },
 
   meta: {

@@ -38,9 +38,13 @@ for (const file of walk(out)) {
   writeFileSync(file, stripped);
 }
 
-// Nothing references the JavaScript chunks any more.
-const chunks = join(out, "_next/static/chunks");
-for (const f of walk(chunks)) if (f.endsWith(".js")) rmSync(f);
+// Nothing references the JavaScript any more (chunks and build manifests).
+for (const f of walk(join(out, "_next/static"))) if (f.endsWith(".js")) rmSync(f);
+
+// Vercel serves out/404.html for unknown URLs; the copies at /404/ and /_not-found/ would only be
+// extra crawlable URLs with the same content.
+rmSync(join(out, "404"), { recursive: true, force: true });
+rmSync(join(out, "_not-found"), { recursive: true, force: true });
 
 const left = walk(out)
   .filter((f) => f.endsWith(".html"))

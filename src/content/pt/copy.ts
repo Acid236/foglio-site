@@ -41,6 +41,14 @@ export const copyPt: SiteCopy = {
     yes: "Sim",
     no: "Não",
     partial: "Em parte",
+    home: "Página inicial do Foglio",
+    menu: "Menu",
+    openSource: "Código aberto",
+    releases: "Versões",
+    issues: "Relatar um problema",
+    moreGuides: "Mais guias",
+    moreAlternatives: "Outras alternativas",
+    screenshotAlt: "Foglio num Mac com um arquivo do Excel aberto (interface em inglês): uma planilha de vendas mensais com receita, custos, lucro e margem, linha de totais e um gráfico de colunas",
   },
 
   meta: {
@@ -219,7 +227,7 @@ export const copyPt: SiteCopy = {
     ],
     tableTitle: "Comparação lado a lado",
     tableNote:
-      "Preços e recursos conferidos nas páginas oficiais de cada fabricante em novembro de 2026 (fontes abaixo); os preços são de tabela nos EUA e variam de país para país, inclusive no Brasil. Os números do Foglio foram medidos em um MacBook Air M4, macOS 27, Foglio 1.0.",
+      "Preços e recursos conferidos nas páginas oficiais de cada fabricante em novembro de 2026 (fontes abaixo); os preços do Excel e do Numbers são os de tabela no Brasil, em reais, e podem mudar. Os números do Foglio foram medidos em um MacBook Air M4, macOS 27, Foglio 1.0.",
     sections: [
       {
         heading: "Qual escolher?",
@@ -268,7 +276,7 @@ export const copyPt: SiteCopy = {
       },
       {
         q: "Os preços dos concorrentes estão atualizados?",
-        a: "Foram conferidos nas páginas dos fabricantes em novembro de 2026 e são preços de tabela nos EUA, em dólar. Os preços mudam e variam por país, inclusive no Brasil, então confira os links das fontes antes de comprar.",
+        a: "Foram conferidos nas páginas oficiais em novembro de 2026 e são os preços de tabela no Brasil, em reais. Os preços mudam e variam por país, então confira os links das fontes antes de comprar.",
       },
     ],
   },

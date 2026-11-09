@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { alternatives, comparisonChecked, comparisonSources, copy, guides } from "@/content";
-import { downloadUrl, facts, releasesUrl, site } from "@/content/facts";
+import { alternatives, comparisonChecked, comparisonPriceSources, comparisonSources, copy, guides } from "@/content";
+import { releasesUrl, site } from "@/content/facts";
 import type { Article, Locale } from "@/content/types";
 import { absolute, formatDate, href } from "@/lib/i18n";
 import { localeInfo } from "@/lib/locales";
+import { ids, organization, softwareApplication } from "@/lib/schema";
 import { Breadcrumbs, DownloadButtons, PageHero, Paragraphs, Positioning, Prose, Screenshot } from "@/components/Blocks";
 import { ComparisonTable } from "@/components/Comparison";
 import { Faq } from "@/components/Faq";
@@ -16,6 +17,8 @@ import { Shell } from "@/components/Shell";
 export function ComparePage({ locale }: { locale: Locale }) {
   const c = copy[locale];
   const p = c.compare;
+  // Price sources for the market this language quotes first, then the shared ones.
+  const sources = [...comparisonPriceSources[locale], ...comparisonSources];
   return (
     <Shell locale={locale} path="/compare/">
       <PageHero locale={locale} h1={p.h1} intro={p.intro} trail={[{ name: c.ui.navCompare, path: "/compare/" }]} />
@@ -26,11 +29,11 @@ export function ComparePage({ locale }: { locale: Locale }) {
         <p className="muted small">
           <Inline text={p.tableNote} locale={locale} /> ({formatDate(locale, comparisonChecked)})
         </p>
-        {comparisonSources.length > 0 && (
+        {sources.length > 0 && (
           <details className="sources">
             <summary>{c.ui.sources}</summary>
             <ul>
-              {comparisonSources.map((s) => (
+              {sources.map((s) => (
                 <li key={s.url}>
                   <a href={s.url} rel="noopener nofollow" target="_blank">
                     {s.label}
@@ -45,6 +48,8 @@ export function ComparePage({ locale }: { locale: Locale }) {
         <Prose sections={p.sections} locale={locale} />
       </article>
       <Faq items={p.faq} title={c.ui.faqTitle} locale={locale} />
+      <RelatedCards locale={locale} kind="alternatives" title={c.home.alternativesTitle} items={alternatives[locale]} wide
+        hub={{ path: "/guides/", label: c.ui.navGuides }} />
       <CtaBand locale={locale} />
     </Shell>
   );
@@ -122,21 +127,7 @@ export function DownloadPage({ locale }: { locale: Locale }) {
         </div>
       </div>
       <Faq items={p.faq} title={c.ui.faqTitle} locale={locale} />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "@id": `${site.url}/#app`,
-          name: site.name,
-          operatingSystem: `macOS ${site.minMacOS} or later`,
-          applicationCategory: "BusinessApplication",
-          softwareVersion: site.version,
-          downloadUrl,
-          fileSize: `${facts.dmgMB}MB`,
-          isAccessibleForFree: true,
-          offers: { "@type": "Offer", price: "0", priceCurrency: localeInfo[locale].currency },
-        }}
-      />
+      <JsonLd data={{ "@context": "https://schema.org", "@graph": [softwareApplication(locale), organization()] }} />
     </Shell>
   );
 }
@@ -184,6 +175,7 @@ export function ArticlePage({ locale, kind, slug }: { locale: Locale; kind: Kind
   const label = kind === "alternatives" ? c.ui.navAlternatives : c.ui.navGuides;
   const path = `/${kind}/${a.slug}/`;
   const related = lists[kind][locale].filter((x) => x.slug !== a.slug);
+  const other: Kind = kind === "alternatives" ? "guides" : "alternatives";
   return (
     <Shell locale={locale} path={path}>
       <article>
@@ -205,7 +197,7 @@ export function ArticlePage({ locale, kind, slug }: { locale: Locale; kind: Kind
         </header>
         {kind === "alternatives" && (
           <div className="wrap narrow">
-            <Screenshot locale={localeInfo[locale].screenshot} alt={plain(a.h1)} />
+            <Screenshot locale={localeInfo[locale].screenshot} alt={c.ui.screenshotAlt} />
           </div>
         )}
         <div className="wrap narrow prose">
@@ -213,44 +205,79 @@ export function ArticlePage({ locale, kind, slug }: { locale: Locale; kind: Kind
         </div>
       </article>
       {a.faq && <Faq items={a.faq} title={c.ui.faqTitle} locale={locale} />}
-      {related.length > 0 && (
-        <section className="section" aria-labelledby="related">
-          <div className="wrap">
-            <h2 id="related">{label}</h2>
-            <div className="cards cards-3">
-              {related.map((r) => (
-                <Link key={r.slug} className="card card-link" href={href(locale, `/${kind}/${r.slug}/`)}>
-                  <h3>{r.cardTitle}</h3>
-                  <p>{r.cardText}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <RelatedCards
+        locale={locale}
+        kind={kind}
+        title={kind === "guides" ? c.ui.moreGuides : c.ui.moreAlternatives}
+        items={related}
+        hub={{ path: `/${other}/`, label: other === "guides" ? c.ui.navGuides : c.ui.navAlternatives }}
+      />
       <CtaBand locale={locale} />
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": kind === "guides" ? "TechArticle" : "Article",
-          headline: plain(a.h1),
-          description: a.meta.description,
-          inLanguage: localeInfo[locale].tag,
-          dateModified: a.updated,
-          datePublished: a.updated,
-          mainEntityOfPage: absolute(locale, path),
-          author: { "@type": "Organization", name: `${site.name} contributors`, url: site.repo },
-          publisher: {
-            "@type": "Organization",
-            name: site.name,
-            url: site.url,
-            logo: { "@type": "ImageObject", url: `${site.url}/icon-256.png` },
-            sameAs: [site.repo, site.org],
-          },
-          image: `${site.url}/og-${locale}.png`,
+          "@graph": [
+            {
+              "@type": kind === "guides" ? "TechArticle" : "Article",
+              headline: plain(a.h1),
+              description: a.meta.description,
+              inLanguage: localeInfo[locale].tag,
+              dateModified: a.updated,
+              datePublished: a.updated,
+              mainEntityOfPage: { "@type": "WebPage", "@id": absolute(locale, path) },
+              author: { "@type": "Organization", "@id": ids.org, name: site.name, url: site.url },
+              publisher: { "@id": ids.org },
+              about: kind === "alternatives" ? { "@id": ids.app } : undefined,
+              image: { "@type": "ImageObject", url: `${site.url}/og-${locale}.png`, width: 1200, height: 630 },
+            },
+            organization(),
+            ...(kind === "alternatives" ? [softwareApplication(locale)] : []),
+          ],
         }}
       />
     </Shell>
+  );
+}
+
+/** Cards linking to sibling pages, plus an optional link to the other hub (guides ↔ alternatives). */
+function RelatedCards({
+  locale,
+  kind,
+  title,
+  items,
+  hub,
+  wide,
+}: {
+  locale: Locale;
+  kind: Kind;
+  title: string;
+  items: Article[];
+  hub?: { path: string; label: string };
+  /** Four cards per row, as on the home page. */
+  wide?: boolean;
+}) {
+  if (!items.length) return null;
+  return (
+    <section className="section" aria-labelledby="related">
+      <div className="wrap">
+        <h2 id="related">{title}</h2>
+        <div className={wide ? "cards cards-4" : "cards cards-3"}>
+          {items.map((r) => (
+            <Link key={r.slug} className="card card-link" href={href(locale, `/${kind}/${r.slug}/`)}>
+              <h3>{r.cardTitle}</h3>
+              <p>{r.cardText}</p>
+            </Link>
+          ))}
+        </div>
+        {hub && (
+          <p className="center">
+            <Link className="text-link" href={href(locale, hub.path)}>
+              {hub.label} <Icon name="arrow" size={16} />
+            </Link>
+          </p>
+        )}
+      </div>
+    </section>
   );
 }
 

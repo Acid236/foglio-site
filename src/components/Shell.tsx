@@ -28,8 +28,9 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
       </a>
       <header className="site-header">
         <div className="wrap header-row">
-          <Link href={href(locale, "/")} className="brand" aria-label={`${site.name} — home`}>
-            <img src={asset("/icon-64.webp")} width={32} height={32} alt="" />
+          <Link href={href(locale, "/")} className="brand" aria-label={t.home}>
+            {/* Low priority: otherwise React preloads this icon in <head>, ahead of the hero screenshot (LCP). */}
+            <img src={asset("/icon-64.webp")} width={32} height={32} alt="" fetchPriority="low" />
             <span>{site.name}</span>
           </Link>
           <nav className="nav-desktop" aria-label="Main">
@@ -45,7 +46,7 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
               {t.navDownload}
             </a>
             <details className="nav-mobile">
-              <summary aria-label="Menu">
+              <summary aria-label={t.menu}>
                 <Icon name="menu" size={22} />
               </summary>
               <nav aria-label="Mobile">
@@ -112,11 +113,11 @@ function Footer({ locale, path }: { locale: Locale; path: string }) {
       ],
     },
     {
-      title: "Open source",
+      title: t.openSource,
       links: [
         { label: "GitHub", to: site.repo, ext: true },
-        { label: "Releases", to: `${site.repo}/releases`, ext: true },
-        { label: "Issues", to: `${site.repo}/issues`, ext: true },
+        { label: t.releases, to: `${site.repo}/releases`, ext: true },
+        { label: t.issues, to: `${site.repo}/issues`, ext: true },
         { label: t.navGuides, to: "/guides/" },
       ],
     },
@@ -126,7 +127,7 @@ function Footer({ locale, path }: { locale: Locale; path: string }) {
       <div className="wrap footer-grid">
         <div>
           <div className="brand">
-            <img src={asset("/icon-64.webp")} width={28} height={28} alt="" />
+            <img src={asset("/icon-64.webp")} width={28} height={28} alt="" loading="lazy" />
             <span>{site.name}</span>
           </div>
           <p className="muted">{t.footerTagline}</p>

@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { alternatives, comparisonApps, comparisonRows, copy } from "@/content";
-import { downloadUrl, facts, site, sizeComparisonMB } from "@/content/facts";
-import { locales, type Locale } from "@/content/types";
-import { absolute, asset, formatNumber, href } from "@/lib/i18n";
+import { facts, site, sizeComparisonMB } from "@/content/facts";
+import type { Locale } from "@/content/types";
+import { asset, formatNumber, href } from "@/lib/i18n";
 import { localeInfo } from "@/lib/locales";
+import { organization, softwareApplication, website } from "@/lib/schema";
 import { Bars, ComparisonTable } from "@/components/Comparison";
 import { DownloadButtons, Paragraphs, Positioning, Screenshot } from "@/components/Blocks";
 import { Faq } from "@/components/Faq";
 import { Icon } from "@/components/Icon";
-import { Inline, plain } from "@/components/Inline";
+import { Inline } from "@/components/Inline";
 import { JsonLd } from "@/components/JsonLd";
 import { Shell } from "@/components/Shell";
 
@@ -71,7 +72,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="wrap">
-          <Screenshot locale={info.screenshot} alt={plain(h.h1)} priority />
+          <Screenshot locale={info.screenshot} alt={c.ui.screenshotAlt} priority />
         </div>
       </section>
 
@@ -218,6 +219,16 @@ export function HomePage({ locale }: { locale: Locale }) {
                 </Link>
               ))}
             </div>
+            <p className="center">
+              <Link className="btn btn-ghost" href={href(locale, "/alternatives/")}>
+                {c.ui.navAlternatives}
+                <Icon name="arrow" size={16} />
+              </Link>{" "}
+              <Link className="btn btn-ghost" href={href(locale, "/guides/")}>
+                {c.ui.navGuides}
+                <Icon name="arrow" size={16} />
+              </Link>
+            </p>
           </div>
         </section>
       )}
@@ -235,41 +246,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "SoftwareApplication",
-              "@id": `${site.url}/#app`,
-              name: site.name,
-              description: c.meta.home.description,
-              url: absolute(locale, "/"),
-              applicationCategory: "BusinessApplication",
-              applicationSubCategory: "Spreadsheet",
-              operatingSystem: `macOS ${site.minMacOS} or later`,
-              softwareVersion: site.version,
-              datePublished: site.released,
-              downloadUrl,
-              fileSize: `${facts.dmgMB}MB`,
-              license: "https://opensource.org/licenses/MIT",
-              isAccessibleForFree: true,
-              inLanguage: locales.map((l) => localeInfo[l].tag),
-              image: `${site.url}/icon-256.png`,
-              screenshot: `${site.url}/screenshots/${info.screenshot}-light-1213.webp`,
-              offers: { "@type": "Offer", price: "0", priceCurrency: info.currency },
-              codeRepository: site.repo,
-            },
-            {
-              "@type": "WebSite",
-              "@id": `${site.url}/#website`,
-              name: site.name,
-              url: site.url,
-              inLanguage: info.tag,
-            },
-          ],
-        }}
-      />
+      <JsonLd data={{ "@context": "https://schema.org", "@graph": [softwareApplication(locale), website(locale), organization()] }} />
     </Shell>
   );
 }

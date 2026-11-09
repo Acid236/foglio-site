@@ -2,7 +2,7 @@
  * Content model for the Foglio website.
  *
  * Every string may use a tiny inline markup that the site renders:
- *   **bold**, `code`, [link text](/internal/path/) or [link text](https://external.example)
+ *   **bold**, *italic*, `code`, [link text](/internal/path/) or [link text](https://external.example)
  * Internal links are written WITHOUT the locale prefix (e.g. "/compare/"); the site adds "/it" itself.
  * No other Markdown, no HTML.
  */
@@ -105,6 +105,15 @@ export interface SiteCopy {
     yes: string;
     no: string;
     partial: string;
+    home: string; // accessible name of the logo link, e.g. "Foglio home page"
+    menu: string; // accessible name of the mobile menu button
+    openSource: string; // footer column title
+    releases: string; // footer link to GitHub releases
+    issues: string; // footer link to GitHub issues
+    moreGuides: string; // heading of the related-guides block
+    moreAlternatives: string; // heading of the related-alternatives block
+    /** Alt text of the app screenshot: what it shows, not the page headline. */
+    screenshotAlt: string;
   };
 
   meta: {

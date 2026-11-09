@@ -39,6 +39,14 @@ export const copyEn: SiteCopy = {
     yes: "Yes",
     no: "No",
     partial: "Partly",
+    home: "Foglio home page",
+    menu: "Menu",
+    openSource: "Open source",
+    releases: "Releases",
+    issues: "Report a problem",
+    moreGuides: "More guides",
+    moreAlternatives: "Other alternatives",
+    screenshotAlt: "Foglio on a Mac with an Excel file open: a monthly sales sheet with revenue, costs, profit and margin columns, a totals row and a column chart of revenue vs costs",
   },
 
   meta: {

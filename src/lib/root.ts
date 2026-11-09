@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { site } from "@/content/facts";
-import type { Locale } from "@/content/types";
 
-export function rootMetadata(locale: Locale): Metadata {
+export function rootMetadata(): Metadata {
   return {
     metadataBase: new URL(site.url),
     applicationName: site.name,
@@ -11,7 +10,6 @@ export function rootMetadata(locale: Locale): Metadata {
     category: "technology",
     formatDetection: { telephone: false, email: false, address: false },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-    other: { "content-language": locale },
   };
 }
 

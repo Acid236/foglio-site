@@ -39,6 +39,14 @@ export const copyFr: SiteCopy = {
     yes: "Oui",
     no: "Non",
     partial: "En partie",
+    home: "Page d'accueil de Foglio",
+    menu: "Menu",
+    openSource: "Open source",
+    releases: "Versions",
+    issues: "Signaler un problème",
+    moreGuides: "Autres guides",
+    moreAlternatives: "Autres alternatives",
+    screenshotAlt: "Foglio sur Mac avec un fichier Excel ouvert (interface en anglais) : un tableau des ventes mensuelles avec chiffre d'affaires, coûts, bénéfice et marge, une ligne de totaux et un histogramme",
   },
 
   meta: {
@@ -213,7 +221,7 @@ export const copyFr: SiteCopy = {
     ],
     tableTitle: "Comparatif côte à côte",
     tableNote:
-      "Prix et fonctionnalités vérifiés sur les pages officielles des éditeurs en novembre 2026 (sources ci-dessous) ; les prix indiqués sont les prix publics aux États-Unis et varient selon le pays. Les chiffres de Foglio ont été mesurés sur un MacBook Air M4, macOS 27, Foglio 1.0.",
+      "Prix et fonctionnalités vérifiés sur les pages officielles des éditeurs en novembre 2026 (sources ci-dessous) ; les prix d'Excel et de Numbers sont les prix publics en France, TVA comprise, et peuvent changer. Les chiffres de Foglio ont été mesurés sur un MacBook Air M4, macOS 27, Foglio 1.0.",
     sections: [
       {
         heading: "Lequel choisir ?",
@@ -262,7 +270,7 @@ export const copyFr: SiteCopy = {
       },
       {
         q: "Les prix des concurrents sont-ils à jour ?",
-        a: "Ils ont été vérifiés sur les pages des éditeurs en novembre 2026 et sont des prix publics aux États-Unis. Les prix changent et varient selon le pays, notamment en France : suivez les liens vers les sources avant d'acheter.",
+        a: "Ils ont été vérifiés sur les pages officielles en novembre 2026 et sont les prix publics en France, TVA comprise. Les prix changent et varient selon le pays : suivez les liens vers les sources avant d'acheter.",
       },
     ],
   },
