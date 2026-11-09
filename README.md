@@ -5,7 +5,7 @@ spreadsheet app for macOS.
 
 Next.js (App Router) + TypeScript, exported as static HTML. After `next build`,
 `scripts/postbuild.mjs` removes the client JavaScript the pages do not need, so visitors get plain
-HTML with inline CSS: about 13 KB (compressed) per page, plus one ~20 KB AVIF screenshot.
+HTML with inline CSS: about 14 KB (compressed) per page, plus one ~20 KB AVIF screenshot.
 
 ```sh
 npm ci
