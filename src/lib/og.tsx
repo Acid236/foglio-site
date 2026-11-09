@@ -31,11 +31,6 @@ const text: Record<Locale, { title: string; line: string }> = {
     title: "A planilha gratuita e nativa para Mac",
     line: `Abre arquivos do Excel · ${dec(facts.dmgMB)} MB · abre em ${dec(facts.launchSeconds)} s · código aberto`,
   },
-  // The image font has no Japanese glyphs: the Japanese preview uses the English text.
-  ja: {
-    title: "The free, native spreadsheet for Mac",
-    line: `Opens Excel files · ${facts.dmgMB} MB · launches in ${facts.launchSeconds} s · open source`,
-  },
 };
 
 /** 1200×630 social preview image, rendered once at build time. */

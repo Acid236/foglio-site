@@ -8,13 +8,11 @@ import { copyEs } from "./es/copy";
 import { alternatives as frAlternatives, guides as frGuides } from "./fr/articles";
 import { copyFr } from "./fr/copy";
 import { guidesBase } from "./guides";
-import { alternatives as jaAlternatives, guides as jaGuides } from "./ja/articles";
-import { copyJa } from "./ja/copy";
 import { alternatives as ptAlternatives, guides as ptGuides } from "./pt/articles";
 import { copyPt } from "./pt/copy";
 import type { Article, Locale, SiteCopy } from "./types";
 
-export const copy: Record<Locale, SiteCopy> = { en: copyEn, it: copyIt, es: copyEs, fr: copyFr, de: copyDe, pt: copyPt, ja: copyJa };
+export const copy: Record<Locale, SiteCopy> = { en: copyEn, it: copyIt, es: copyEs, fr: copyFr, de: copyDe, pt: copyPt };
 
 export const alternatives: Record<Locale, Article[]> = {
   ...alternativesBase,
@@ -22,7 +20,6 @@ export const alternatives: Record<Locale, Article[]> = {
   fr: frAlternatives,
   de: deAlternatives,
   pt: ptAlternatives,
-  ja: jaAlternatives,
 };
 
 export const guides: Record<Locale, Article[]> = {
@@ -31,7 +28,6 @@ export const guides: Record<Locale, Article[]> = {
   fr: frGuides,
   de: deGuides,
   pt: ptGuides,
-  ja: jaGuides,
 };
 
 export { comparisonApps, comparisonChecked, comparisonSources } from "./comparison";

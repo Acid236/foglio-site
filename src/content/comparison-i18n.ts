@@ -2,11 +2,10 @@ import { rawComparisonRows } from "./comparison";
 import { comparison as de } from "./de/comparison";
 import { comparison as es } from "./es/comparison";
 import { comparison as fr } from "./fr/comparison";
-import { comparison as ja } from "./ja/comparison";
 import { comparison as pt } from "./pt/comparison";
 import type { BaseLocale, ComparisonDictionary, ComparisonRow, Locale } from "./types";
 
-const dictionaries: Record<Exclude<Locale, BaseLocale>, ComparisonDictionary> = { es, fr, de, pt, ja };
+const dictionaries: Record<Exclude<Locale, BaseLocale>, ComparisonDictionary> = { es, fr, de, pt };
 
 const missing: string[] = [];
 

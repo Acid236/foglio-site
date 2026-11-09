@@ -23,5 +23,4 @@ export const localeInfo: Record<
   fr: { name: "Français", tag: "fr", og: "fr_FR", price: "0 €", currency: "EUR", screenshot: "en" },
   de: { name: "Deutsch", tag: "de", og: "de_DE", price: "0 €", currency: "EUR", screenshot: "en" },
   pt: { name: "Português (Brasil)", tag: "pt-BR", og: "pt_BR", price: "R$ 0", currency: "BRL", screenshot: "en" },
-  ja: { name: "日本語", tag: "ja", og: "ja_JP", price: "¥0", currency: "JPY", screenshot: "en" },
 };

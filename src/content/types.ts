@@ -10,8 +10,8 @@
 /** Languages written by hand in the source files (comparison rows carry both inline). */
 export type BaseLocale = "en" | "it";
 /** All site languages. English is the default (served at "/"), the others under "/<code>/". */
-export type Locale = BaseLocale | "es" | "fr" | "de" | "pt" | "ja";
-export const locales: Locale[] = ["en", "it", "es", "fr", "de", "pt", "ja"];
+export type Locale = BaseLocale | "es" | "fr" | "de" | "pt";
+export const locales: Locale[] = ["en", "it", "es", "fr", "de", "pt"];
 
 /** <title> (≤ 60 characters, the site appends nothing) and meta description (120–155 characters). */
 export interface Meta {
