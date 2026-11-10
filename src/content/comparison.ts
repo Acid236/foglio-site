@@ -82,7 +82,7 @@ export const rawComparisonRows: RawComparisonRow[] = [
     group: G.size,
     label: t("Download size", "Dimensione del download"),
     cells: {
-      foglio: { text: t("7.5 MB (universal)", "7,5 MB (universale)"), tone: "good" },
+      foglio: { text: t("7.7 MB (universal)", "7,7 MB (universale)"), tone: "good" },
       excel: { text: t("1.2 GB (Excel alone, Mac App Store)", "1,2 GB (solo Excel, Mac App Store)"), tone: "bad" },
       numbers: { text: t("661 MB (App Store listing)", "661 MB (scheda App Store)"), tone: "bad" },
       libreoffice: { text: t("≈ 300 MB (Apple silicon disk image)", "≈ 300 MB (immagine disco Apple silicon)"), tone: "partial" },
@@ -93,7 +93,7 @@ export const rawComparisonRows: RawComparisonRow[] = [
     group: G.size,
     label: t("Disk space", "Spazio su disco"),
     cells: {
-      foglio: { text: "19 MB", tone: "good" },
+      foglio: { text: "20 MB", tone: "good" },
       excel: { text: t("Over 1 GB", "Oltre 1 GB"), tone: "bad" },
       numbers: { text: t("Hundreds of MB", "Centinaia di MB"), tone: "partial" },
       libreoffice: { text: t("Up to 800 MB (official requirements)", "Fino a 800 MB (requisiti ufficiali)"), tone: "partial" },

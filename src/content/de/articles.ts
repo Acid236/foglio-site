@@ -102,7 +102,7 @@ export const alternatives: Article[] = [
         heading: "Was du gewinnst",
         body: [
           "**Es kostet nichts, dauerhaft.** Kein Abo, keine Testphase, kein Konto, keine Werbung. Foglio steht unter den Lizenzen MIT und Apache-2.0, der Quellcode liegt auf [GitHub](https://github.com/GetFoglio/foglio).",
-          "**Es ist winzig und schnell.** Der Download ist 7,5 MB groß, die installierte App rund 19 MB – gegenüber mehr als einem Gigabyte allein für Excel. Foglio ist nach 0,24 s einsatzbereit und braucht mit leerem Blatt rund 58 MB Arbeitsspeicher. Eine Arbeitsmappe mit 100.000 Zeilen und 300.000 Formeln öffnet in 1,1 s und ist nach einer Änderung in 16 ms neu berechnet.",
+          "**Es ist winzig und schnell.** Der Download ist 7,7 MB groß, die installierte App rund 20 MB – gegenüber mehr als einem Gigabyte allein für Excel. Foglio ist nach 0,24 s einsatzbereit und braucht mit leerem Blatt rund 58 MB Arbeitsspeicher. Eine Arbeitsmappe mit 100.000 Zeilen und 300.000 Formeln öffnet in 1,1 s und ist nach einer Änderung in 16 ms neu berechnet.",
           "**Es bleibt auf deinem Mac.** Foglio baut von sich aus keine Netzwerkverbindungen auf und hat keine Telemetrie. Du musst dich nirgends anmelden, um eine Datei zu öffnen.",
         ],
       },
@@ -112,7 +112,7 @@ export const alternatives: Article[] = [
           "Foglio 1.0 ist die Erstversion eines kleinen Projekts und will nicht das ganze Excel sein. Bevor du ein Abo kündigst, prüf, ob deine Arbeit von einem dieser Punkte abhängt:",
         ],
         bullets: [
-          "**Makros und VBA.** `.xlsm`-Dateien öffnen sich, aber Makros werden weder ausgeführt noch beim Speichern behalten.",
+          "**Makros und VBA.** `.xlsm`-Dateien öffnen sich und werden mit ihren Makros gespeichert, die Makros werden aber nie ausgeführt.",
           "**Pivot-Tabellen.** Echte Pivot-Tabellen gibt es noch nicht. *Summarize by* erstellt ein live aktualisiertes Übersichtsblatt aus SUMMEWENNS- und ZÄHLENWENNS-Formeln, das einfache Fälle abdeckt.",
           "**Power Query, Datenverbindungen und Add-ins.** Nicht verfügbar.",
           "**Formen, Textfelder und SmartArt.** Werden beim Öffnen weggelassen. Diagramme und Bilder bleiben erhalten.",
@@ -152,7 +152,7 @@ export const alternatives: Article[] = [
       {
         heading: "So testest du die kostenlose Excel-Alternative mit deinen eigenen Dateien",
         body: [
-          "[Lade Foglio herunter](/download/) (7,5 MB, macOS 14 oder neuer), zieh es in den Ordner „Programme“ und öffne es. Da Foglio 1.0 nicht von Apple notarisiert ist, fragt macOS beim ersten Mal nach; die Download-Seite zeigt, wie es geht. Öffne dann die Kopie einer echten Arbeitsmappe über File ▸ Open oder klick mit der rechten Maustaste auf eine `.xlsx`-Datei und wähle Öffnen mit ▸ Foglio.",
+          "[Lade Foglio herunter](/download/) (7,7 MB, macOS 14 oder neuer), zieh es in den Ordner „Programme“ und öffne es. Da Foglio 1.0 nicht von Apple notarisiert ist, fragt macOS beim ersten Mal nach; die Download-Seite zeigt, wie es geht. Öffne dann die Kopie einer echten Arbeitsmappe über File ▸ Open oder klick mit der rechten Maustaste auf eine `.xlsx`-Datei und wähle Öffnen mit ▸ Foglio.",
           "Prüf, was dir wichtig ist: Summen, Suchfunktionen, Datumsangaben, Zahlenformate, Diagramme. Behalte das Original, bis du dir sicher bist. Wenn etwas falsch aussieht, [melde es bitte auf GitHub](https://github.com/GetFoglio/foglio/issues), am besten mit einer Beispieldatei.",
         ],
       },
@@ -164,7 +164,7 @@ export const alternatives: Article[] = [
       },
       {
         q: "Öffnet sich eine mit Foglio gespeicherte Datei korrekt in Excel?",
-        a: "Ja, Foglio speichert normale `.xlsx`-Dateien mit Formeln in der englischen Form von Excel. Formatierung, Diagramme, Bilder, Kommentare, Datenüberprüfung und bedingte Formatierung werden zurückgeschrieben. Was Foglio nicht unterstützt, etwa Makros, Formen oder Pivot-Tabellen, bleibt nicht erhalten – behalte bei komplexen Dateien also das Original.",
+        a: "Ja, Foglio speichert normale `.xlsx`-Dateien mit Formeln in der englischen Form von Excel. Formatierung, Diagramme, Bilder, Kommentare, Datenüberprüfung und bedingte Formatierung werden zurückgeschrieben. Was Foglio nicht unterstützt, etwa Formen oder Pivot-Tabellen, bleibt nicht erhalten – behalte bei komplexen Dateien also das Original. Makros bleiben erhalten, wenn du als `.xlsm` speicherst.",
       },
       {
         q: "Hat Foglio dieselben Tastenkürzel wie Excel für Mac?",
@@ -237,7 +237,7 @@ export const alternatives: Article[] = [
       {
         heading: "Größe und Tempo",
         body: [
-          "Im App Store wird Numbers mit 661 MB angegeben (ein gemeinsamer Eintrag für Mac, iPhone und iPad). Foglio ist ein Download von 7,5 MB und installiert rund 19 MB groß. Es ist nach 0,24 s einsatzbereit, braucht im Leerlauf 0 % CPU und mit leerem Blatt rund 58 MB Arbeitsspeicher. Eine Arbeitsmappe mit 100.000 Zeilen und 300.000 Formeln öffnet auf unserem Test-Mac in 1,1 s.",
+          "Im App Store wird Numbers mit 661 MB angegeben (ein gemeinsamer Eintrag für Mac, iPhone und iPad). Foglio ist ein Download von 7,7 MB und installiert rund 20 MB groß. Es ist nach 0,24 s einsatzbereit, braucht im Leerlauf 0 % CPU und mit leerem Blatt rund 58 MB Arbeitsspeicher. Eine Arbeitsmappe mit 100.000 Zeilen und 300.000 Formeln öffnet auf unserem Test-Mac in 1,1 s.",
           "Numbers ist auf vielen Macs vorinstalliert, die Größe ist dir also vielleicht egal. Die Startzeit und der Umgang mit sehr großen Excel-Blättern vielleicht nicht.",
         ],
       },
@@ -285,7 +285,7 @@ export const alternatives: Article[] = [
     meta: {
       title: "Schlanke LibreOffice-Calc-Alternative für Mac | Foglio",
       description:
-        "LibreOffice ist kostenlos, aber groß und keine native Mac-App. Foglio ist eine 7,5 MB kleine Tabellenkalkulation in Swift und Rust. Wann sich was lohnt.",
+        "LibreOffice ist kostenlos, aber groß und keine native Mac-App. Foglio ist eine 7,7 MB kleine Tabellenkalkulation in Swift und Rust. Wann sich was lohnt.",
     },
     h1: "Eine schlanke, native Alternative zu LibreOffice Calc auf dem Mac",
     intro: [
@@ -299,7 +299,7 @@ export const alternatives: Article[] = [
           "Beide Apps sind kostenlos und Open Source, beide funktionieren vollständig offline, ohne Konto und ohne Telemetrie. Der Unterschied liegt im Umfang. LibreOffice will auf jeder Desktop-Plattform eine vollständige Alternative zu Microsoft Office sein. Foglio will der schnellste und leichteste Weg sein, alltägliche Excel-Tabellen auf dem Mac zu öffnen und zu bearbeiten – und sonst nichts.",
         ],
         bullets: [
-          "**Foglio:** Swift/AppKit-Oberfläche, Rust-Engine, nur Mac, MIT / Apache-2.0, 7,5 MB Download, rund 19 MB installiert.",
+          "**Foglio:** Swift/AppKit-Oberfläche, Rust-Engine, nur Mac, MIT / Apache-2.0, 7,7 MB Download, rund 20 MB installiert.",
           "**LibreOffice:** C++-Paket mit eigenem UI-Toolkit, Windows, macOS und Linux, MPL-2.0, rund 300 MB Download, laut Systemanforderungen bis zu 800 MB auf der Festplatte.",
         ],
       },
@@ -364,7 +364,7 @@ export const alternatives: Article[] = [
     ],
     updated: UPDATED,
     cardTitle: "Schlankere Alternative zu LibreOffice",
-    cardText: "Eine native, 7,5 MB kleine Mac-App für alltägliche Excel-Dateien – und wann LibreOffice das bessere Werkzeug bleibt.",
+    cardText: "Eine native, 7,7 MB kleine Mac-App für alltägliche Excel-Dateien – und wann LibreOffice das bessere Werkzeug bleibt.",
   },
 
   // ───────────────────────────────────────────────────────────────────
@@ -421,7 +421,7 @@ export const alternatives: Article[] = [
         heading: "Deine Dateien, dein Ordner",
         body: [
           "Foglio speichert normale `.xlsx`-Dateien, wo du willst: im Ordner „Dokumente“, auf einer externen Festplatte oder, wenn du möchtest, in einem synchronisierten Ordner wie iCloud Drive oder Dropbox. Da es Excel-Dateien sind, kannst du jede später jederzeit in Google Sheets hochladen. Es gibt in keine Richtung einen Lock-in.",
-          "[Lade Foglio kostenlos herunter](/download/) (7,5 MB, macOS 14+). Wie es auch gegen Excel, Numbers und LibreOffice abschneidet, zeigt der [vollständige Vergleich](/compare/).",
+          "[Lade Foglio kostenlos herunter](/download/) (7,7 MB, macOS 14+). Wie es auch gegen Excel, Numbers und LibreOffice abschneidet, zeigt der [vollständige Vergleich](/compare/).",
         ],
       },
     ],
@@ -479,7 +479,7 @@ export const guides: Article[] = [
             heading: "Schritte mit Foglio",
             body: [],
             bullets: [
-              "[Lade Foglio herunter](/download/) (7,5 MB, macOS 14 oder neuer) und zieh es in den Ordner „Programme“.",
+              "[Lade Foglio herunter](/download/) (7,7 MB, macOS 14 oder neuer) und zieh es in den Ordner „Programme“.",
               "Bestätige beim ersten Mal die Sicherheitsabfrage von macOS: Unter macOS 15 oder neuer gehst du zu Systemeinstellungen ▸ Datenschutz & Sicherheit ▸ **Dennoch öffnen**; unter macOS 14 klickst du mit der rechten Maustaste auf die App und wählst **Öffnen**.",
               "Klick im Finder mit der rechten Maustaste auf deine `.xlsx`-Datei und wähle **Öffnen mit ▸ Foglio**, oder zieh sie auf das Foglio-Symbol.",
               "Bearbeiten, dann ⌘S drücken. Die Datei wird als `.xlsx` gespeichert und ist bereit zum Zurückschicken.",
@@ -535,7 +535,7 @@ export const guides: Article[] = [
       },
       {
         q: "Was ist mit .xlsm-Dateien mit Makros?",
-        a: "Kostenlose Apps öffnen die Daten, aber nur Excel führt VBA-Makros zuverlässig aus. Foglio öffnet `.xlsm`-Dateien, ohne die Makros auszuführen, und behält sie beim Speichern nicht.",
+        a: "Kostenlose Apps öffnen die Daten, aber nur Excel führt VBA-Makros zuverlässig aus. Foglio öffnet `.xlsm`-Dateien, ohne die Makros auszuführen, und behält sie beim Speichern als `.xlsm`.",
       },
       {
         q: "Ist es sicher, Arbeitsdateien in einen Online-Viewer hochzuladen?",
@@ -798,7 +798,7 @@ export const guides: Article[] = [
         heading: "Foglio",
         body: [
           "**Am besten für:** alltägliche Excel-Dateien schnell, privat und nativ öffnen und bearbeiten.",
-          "Foglio ist kostenlos und Open Source (MIT / Apache-2.0), geschrieben in Swift/AppKit mit einer Rust-Engine. Es ist ein Download von 7,5 MB, startet in 0,24 s, bearbeitet `.xlsx` direkt, versteht rund 500 Excel-Funktionen in deiner Sprache (`=SUMME()` auf einem deutschen Mac) und erkennt Zeichensätze und Trennzeichen von CSV-Dateien. Kein Konto, keine Telemetrie, keine eigenen Netzwerkverbindungen. Die Menüs sind auf Englisch oder Italienisch.",
+          "Foglio ist kostenlos und Open Source (MIT / Apache-2.0), geschrieben in Swift/AppKit mit einer Rust-Engine. Es ist ein Download von 7,7 MB, startet in 0,24 s, bearbeitet `.xlsx` direkt, versteht rund 500 Excel-Funktionen in deiner Sprache (`=SUMME()` auf einem deutschen Mac) und erkennt Zeichensätze und Trennzeichen von CSV-Dateien. Kein Konto, keine Telemetrie, keine eigenen Netzwerkverbindungen. Die Menüs sind auf Englisch oder Italienisch.",
           "**Achtung:** Es ist eine Version 1.0; es gibt keine Pivot-Tabellen (nur das einfachere *Summarize by*), keine Makros, keine Zusammenarbeit, keine Version für iPhone oder iPad, und passwortgeschützte Dateien lassen sich nicht öffnen. Siehe den [vollständigen Vergleich](/compare/).",
         ],
       },
@@ -826,7 +826,7 @@ export const guides: Article[] = [
       },
       {
         q: "Welche ist die leichteste?",
-        a: "Foglio, mit 7,5 MB Download und rund 19 MB installiert. Google Sheets und Excel für das Web installieren nichts, brauchen aber einen Browser und eine Internetverbindung.",
+        a: "Foglio, mit 7,7 MB Download und rund 20 MB installiert. Google Sheets und Excel für das Web installieren nichts, brauchen aber einen Browser und eine Internetverbindung.",
       },
       {
         q: "Sind diese Apps kostenlos für die geschäftliche Nutzung?",

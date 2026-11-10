@@ -98,7 +98,7 @@ const en: Article[] = [
             heading: "Steps with Foglio",
             body: [],
             bullets: [
-              "[Download Foglio](/download/) (7.5 MB, macOS 14 or later) and drag it to Applications.",
+              "[Download Foglio](/download/) (7.7 MB, macOS 14 or later) and drag it to Applications.",
               "The first time, confirm the macOS security prompt: on macOS 15 or later go to System Settings ▸ Privacy & Security ▸ **Open Anyway**; on macOS 14 right-click the app and choose **Open**.",
               "Right-click your `.xlsx` file in Finder and choose **Open With ▸ Foglio**, or drag it onto the Foglio icon.",
               "Edit, then press ⌘S. The file is saved as `.xlsx`, ready to send back.",
@@ -154,7 +154,7 @@ const en: Article[] = [
       },
       {
         q: "What about .xlsm files with macros?",
-        a: "Free apps open the data, but only Excel runs VBA macros reliably. Foglio opens `.xlsm` files without running the macros, and they are not kept when you save.",
+        a: "Free apps open the data, but only Excel runs VBA macros reliably. Foglio opens `.xlsm` files without running the macros, and keeps them when you save as `.xlsm`.",
       },
       {
         q: "Is it safe to upload work files to an online viewer?",
@@ -417,7 +417,7 @@ const en: Article[] = [
         heading: "Foglio",
         body: [
           "**Best for:** opening and editing everyday Excel files quickly, privately and natively.",
-          "Foglio is free and open source (MIT / Apache-2.0), written in Swift/AppKit with a Rust engine. It is a 7.5 MB download, opens in 0.24 s, edits `.xlsx` directly, understands about 500 Excel functions in your language (`=SOMMA()` on an Italian Mac), and detects CSV encodings and delimiters. No account, no telemetry, no network connections of its own.",
+          "Foglio is free and open source (MIT / Apache-2.0), written in Swift/AppKit with a Rust engine. It is a 7.7 MB download, opens in 0.24 s, edits `.xlsx` directly, understands about 500 Excel functions in your language (`=SOMMA()` on an Italian Mac), and detects CSV encodings and delimiters. No account, no telemetry, no network connections of its own.",
           "**Watch out for:** it is a 1.0 release; there are no pivot tables (only a simpler *Summarize by*), no macros, no collaboration, no iPhone or iPad version, and it cannot open password-protected files. See the [full comparison](/compare/).",
         ],
       },
@@ -445,7 +445,7 @@ const en: Article[] = [
       },
       {
         q: "Which one is the lightest?",
-        a: "Foglio, at a 7.5 MB download and about 19 MB installed. Google Sheets and Excel for the web install nothing but need a browser and an internet connection.",
+        a: "Foglio, at a 7.7 MB download and about 20 MB installed. Google Sheets and Excel for the web install nothing but need a browser and an internet connection.",
       },
       {
         q: "Are these apps free for business use?",
@@ -574,7 +574,7 @@ const it: Article[] = [
             heading: "I passaggi con Foglio",
             body: [],
             bullets: [
-              "[Scarica Foglio](/download/) (7,5 MB, macOS 14 o successivo) e trascinalo in Applicazioni.",
+              "[Scarica Foglio](/download/) (7,7 MB, macOS 14 o successivo) e trascinalo in Applicazioni.",
               "La prima volta conferma l'avviso di sicurezza di macOS: su macOS 15 o successivi vai in Impostazioni di Sistema ▸ Privacy e sicurezza ▸ **Apri comunque**; su macOS 14 fai clic destro sull'app e scegli **Apri**.",
               "Fai clic destro sul file `.xlsx` nel Finder e scegli **Apri con ▸ Foglio**, oppure trascinalo sull'icona di Foglio.",
               "Modifica e premi ⌘S. Il file resta un `.xlsx`, pronto da rimandare.",
@@ -630,7 +630,7 @@ const it: Article[] = [
       },
       {
         q: "E i file .xlsm con le macro?",
-        a: "Le app gratuite aprono i dati, ma solo Excel esegue le macro VBA in modo affidabile. Foglio apre i file `.xlsm` senza eseguire le macro, che non vengono conservate al salvataggio.",
+        a: "Le app gratuite aprono i dati, ma solo Excel esegue le macro VBA in modo affidabile. Foglio apre i file `.xlsm` senza eseguire le macro, e le conserva quando salvi in `.xlsm`.",
       },
       {
         q: "È sicuro caricare file di lavoro su un visualizzatore online?",
@@ -891,7 +891,7 @@ const it: Article[] = [
         heading: "Foglio",
         body: [
           "**Ideale per:** aprire e modificare i file Excel di tutti i giorni in modo rapido, riservato e nativo.",
-          "Foglio è gratuito e open source (MIT / Apache-2.0), scritto in Swift/AppKit con un motore in Rust. Pesa 7,5 MB, si apre in 0,24 s, modifica direttamente gli `.xlsx`, conosce circa 500 funzioni di Excel in italiano (`=SOMMA()` su un Mac italiano) e riconosce da solo codifica e separatore dei CSV. Nessun account, nessuna telemetria, nessuna connessione di rete di sua iniziativa.",
+          "Foglio è gratuito e open source (MIT / Apache-2.0), scritto in Swift/AppKit con un motore in Rust. Pesa 7,7 MB, si apre in 0,24 s, modifica direttamente gli `.xlsx`, conosce circa 500 funzioni di Excel in italiano (`=SOMMA()` su un Mac italiano) e riconosce da solo codifica e separatore dei CSV. Nessun account, nessuna telemetria, nessuna connessione di rete di sua iniziativa.",
           "**Attenzione:** è una versione 1.0; non ha tabelle pivot (solo il più semplice *Riepiloga per*), né macro, né collaborazione, né versioni per iPhone o iPad, e non apre file protetti da password. Vedi il [confronto completo](/compare/).",
         ],
       },
@@ -919,7 +919,7 @@ const it: Article[] = [
       },
       {
         q: "Qual è il più leggero?",
-        a: "Foglio: 7,5 MB di download e circa 19 MB installato. Fogli Google ed Excel per il web non installano nulla, ma richiedono un browser e una connessione a Internet.",
+        a: "Foglio: 7,7 MB di download e circa 20 MB installato. Fogli Google ed Excel per il web non installano nulla, ma richiedono un browser e una connessione a Internet.",
       },
       {
         q: "Queste app sono gratuite anche per uso aziendale?",

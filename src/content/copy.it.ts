@@ -8,7 +8,7 @@ export const copyIt: SiteCopy = {
     navGuides: "Guide",
     navDownload: "Scarica",
     download: "Scarica per Mac",
-    downloadSub: "Gratis · macOS 14+ · Apple silicon e Intel · 7,5 MB",
+    downloadSub: "Gratis · macOS 14+ · Apple silicon e Intel · 7,7 MB",
     starOnGitHub: "Lascia una stella su GitHub",
     readMore: "Continua a leggere",
     faqTitle: "Domande frequenti",
@@ -52,7 +52,7 @@ export const copyIt: SiteCopy = {
     home: {
       title: "Foglio: foglio di calcolo gratis per Mac, compatibile Excel",
       description:
-        "Foglio è un foglio di calcolo gratis per Mac, open source. Apre e salva file Excel xlsx, ~500 funzioni, nativo e leggero: 7,5 MB. Nessun account.",
+        "Foglio è un foglio di calcolo gratis per Mac, open source. Apre e salva file Excel xlsx, ~500 funzioni, nativo e leggero: 7,7 MB. Nessun account.",
       ogTitle: "Foglio — il foglio di calcolo gratuito, nativo e open source per Mac",
     },
     compare: {
@@ -63,12 +63,12 @@ export const copyIt: SiteCopy = {
     technology: {
       title: "Come è fatto Foglio: Swift, AppKit e Rust | Foglio",
       description:
-        "Dentro Foglio: un'app nativa Swift/AppKit con un motore in Rust (un fork di IronCalc). Perché pesa 7,5 MB, si apre in 0,24 s e ricalcola così in fretta.",
+        "Dentro Foglio: un'app nativa Swift/AppKit con un motore in Rust (un fork di IronCalc). Perché pesa 7,7 MB, si apre in 0,24 s e ricalcola così in fretta.",
     },
     download: {
       title: "Scarica Foglio per Mac: foglio di calcolo gratis | Foglio",
       description:
-        "Scarica Foglio 1.0, foglio di calcolo gratuito per macOS 14 o successivi. App universale per Apple silicon e Intel, immagine disco da 7,5 MB.",
+        "Scarica Foglio 1.0, foglio di calcolo gratuito per macOS 14 o successivi. App universale per Apple silicon e Intel, immagine disco da 7,7 MB.",
     },
     alternatives: {
       title: "Alternative a Excel, Numbers e Fogli Google su Mac | Foglio",
@@ -89,7 +89,7 @@ export const copyIt: SiteCopy = {
       "Foglio è un foglio di calcolo gratis per Mac: un'app piccola, veloce e nativa per i fogli di tutti i giorni. Apre e salva `.xlsx`, apre `.xls`, `.ods` e `.csv` e conosce circa 500 funzioni di Excel. Niente abbonamento, niente account, niente pubblicità.",
     badges: [
       "Gratis per sempre, MIT / Apache-2.0",
-      "7,5 MB di download, si apre in 0,24 s",
+      "7,7 MB di download, si apre in 0,24 s",
       "Nativo Swift/AppKit, niente Electron",
       "Nessun account, nessuna telemetria",
     ],
@@ -128,7 +128,7 @@ export const copyIt: SiteCopy = {
       {
         icon: "feather",
         title: "Piccolo e leggero",
-        text: "7,5 MB di download, 19 MB installato, circa 58 MB di memoria con un foglio vuoto e 0 % di CPU quando è inattivo. Le ventole restano zitte.",
+        text: "7,7 MB di download, 20 MB installato, circa 58 MB di memoria con un foglio vuoto e 0 % di CPU quando è inattivo. Le ventole restano zitte.",
       },
       {
         icon: "apple",
@@ -169,13 +169,13 @@ export const copyIt: SiteCopy = {
       "Un'interfaccia Swift/AppKit con una griglia su misura, sopra un motore di calcolo in Rust (un fork migliorato di IronCalc) collegato come semplice libreria statica. Scopri [come è fatto Foglio](/technology/) e perché questo lo rende piccolo e veloce.",
     formatsTitle: "Apre i file che ti mandano",
     formatsText:
-      "`.xlsx` e `.xlsm` da Excel, i vecchi `.xls` e i binari `.xlsb`, `.ods` da LibreOffice, e `.csv` / `.tsv` con riconoscimento automatico di codifica, separatore e virgola decimale. Salva in `.xlsx`, esporta in CSV e PDF. Leggi le guide su come [aprire file xlsx su Mac senza Excel](/guides/open-xlsx-on-mac-without-excel/), [aprire i vecchi file .xls](/guides/open-xls-on-mac/) e [aprire file CSV su Mac](/guides/open-csv-on-mac/).",
+      "`.xlsx` e `.xlsm` da Excel, i vecchi `.xls` e i binari `.xlsb`, `.ods` da LibreOffice, e `.csv` / `.tsv` con riconoscimento automatico di codifica, separatore e virgola decimale. Salva in `.xlsx` e `.xlsm` (le macro restano, ma non vengono mai eseguite), CSV e TSV, ed esporta in PDF. Leggi le guide su come [aprire file xlsx su Mac senza Excel](/guides/open-xlsx-on-mac-without-excel/), [aprire i vecchi file .xls](/guides/open-xls-on-mac/) e [aprire file CSV su Mac](/guides/open-csv-on-mac/).",
     alternativesTitle: "Arrivi da un'altra app?",
     alternativesText:
       "Note oneste per chi arriva da [Excel per Mac](/alternatives/excel-for-mac/), [Numbers](/alternatives/numbers/), [LibreOffice Calc](/alternatives/libreoffice/) o [Fogli Google](/alternatives/google-sheets/), compreso quando conviene continuare a usarli. Le trovi tutte nella pagina delle [alternative](/alternatives/).",
     ctaTitle: "Provalo con i tuoi fogli di calcolo",
     ctaText:
-      "Sono 7,5 MB e non costa nulla. Foglio 1.0 è una prima versione: mentre lo provi, tieni una copia di backup dei file importanti.",
+      "Sono 7,7 MB e non costa nulla. Foglio 1.0 è una prima versione: mentre lo provi, tieni una copia di backup dei file importanti.",
     faq: [
       {
         q: "Foglio è davvero gratis?",
@@ -183,7 +183,7 @@ export const copyIt: SiteCopy = {
       },
       {
         q: "Foglio apre e salva i file Excel?",
-        a: "Sì. Legge e scrive `.xlsx` con formattazione, grafici, immagini, note, convalida dati e formattazione condizionale. Apre anche `.xls`, `.xlsb`, `.xlsm` e `.ods`, oltre ai file di testo CSV e TSV. Salva in `.xlsx` ed esporta in CSV e PDF.",
+        a: "Sì. Legge e scrive `.xlsx` con formattazione, grafici, immagini, note, convalida dati e formattazione condizionale. Apre anche `.xls`, `.xlsb`, `.xlsm` e `.ods`, oltre ai file di testo CSV e TSV. Salva in `.xlsx` o `.xlsm` (mantenendo le macro, che non esegue mai), CSV o TSV, ed esporta in PDF.",
       },
       {
         q: "Può sostituire completamente Microsoft Excel?",
@@ -207,7 +207,7 @@ export const copyIt: SiteCopy = {
       },
       {
         q: "Foglio è un'app finita?",
-        a: "Foglio 1.0 gestisce dall'inizio alla fine i fogli di tutti i giorni ed è coperto da 69 test automatici dell'interfaccia, ma è una prima versione. Tieni un backup dei file importanti e segnala i problemi su [GitHub](https://github.com/GetFoglio/foglio/issues).",
+        a: "Foglio 1.0 gestisce dall'inizio alla fine i fogli di tutti i giorni ed è coperto da 83 test automatici dell'interfaccia, ma è una prima versione. Tieni un backup dei file importanti e segnala i problemi su [GitHub](https://github.com/GetFoglio/foglio/issues).",
       },
     ],
   },
@@ -236,7 +236,7 @@ export const copyIt: SiteCopy = {
       {
         heading: "Dove vince Foglio",
         body: [
-          "Foglio è di gran lunga l'app più piccola del confronto: 7,5 MB di download contro centinaia di megabyte o qualche gigabyte delle alternative desktop. Mostra una finestra pronta in 0,24 s, usa circa 58 MB di memoria con un foglio vuoto e resta a 0 % di CPU quando è inattivo.",
+          "Foglio è di gran lunga l'app più piccola del confronto: 7,7 MB di download contro centinaia di megabyte o qualche gigabyte delle alternative desktop. Mostra una finestra pronta in 0,24 s, usa circa 58 MB di memoria con un foglio vuoto e resta a 0 % di CPU quando è inattivo.",
           "È gratuito senza condizioni, open source e funziona completamente offline senza account. A differenza di Numbers modifica i file `.xlsx` senza convertirli, e su un Mac in italiano scrivi le formule con gli stessi nomi di Excel in italiano: `SOMMA`, `SE`, `CERCA.VERT`.",
         ],
       },
@@ -283,7 +283,7 @@ export const copyIt: SiteCopy = {
         heading: "In parole semplici",
         body: [
           "Immagina Foglio diviso in due parti. Quella che vedi (finestre, menu, la griglia di celle) è scritta con gli strumenti di Apple, quindi ha l'aspetto e il comportamento di tutte le altre app del Mac. Quella che fa i conti (legge i file, interpreta le formule, ricalcola) è un motore separato scritto in Rust, un linguaggio che produce programmi molto veloci e compatti.",
-          "Le due parti comunicano attraverso un'interfaccia piccola e semplice. In mezzo non c'è nient'altro: nessun browser nascosto, nessuna macchina virtuale, nessun runtime da scaricare. Ecco perché l'intera app pesa 7,5 MB, si apre in 0,24 s e usa circa 58 MB di memoria con un foglio vuoto.",
+          "Le due parti comunicano attraverso un'interfaccia piccola e semplice. In mezzo non c'è nient'altro: nessun browser nascosto, nessuna macchina virtuale, nessun runtime da scaricare. Ecco perché l'intera app pesa 7,7 MB, si apre in 0,24 s e usa circa 58 MB di memoria con un foglio vuoto.",
         ],
       },
       {
@@ -323,14 +323,14 @@ export const copyIt: SiteCopy = {
       {
         heading: "Testato con tastiera e mouse veri",
         body: [
-          "Foglio ha 69 test dell'interfaccia che usano l'app reale con eventi di tastiera e mouse reali: scrivere formule, riempire intervalli, ordinare, annullare, salvare e riaprire file. Gli importatori di file e il motore di calcolo hanno le proprie suite di test in Rust, e una modalità speciale confronta ogni ricalcolo incrementale con un ricalcolo completo.",
+          "Foglio ha 83 test dell'interfaccia che usano l'app reale con eventi di tastiera e mouse reali: scrivere formule, riempire intervalli, ordinare, annullare, salvare e riaprire file. Gli importatori di file e il motore di calcolo hanno le proprie suite di test in Rust, e una modalità speciale confronta ogni ricalcolo incrementale con un ricalcolo completo.",
         ],
       },
       {
         heading: "Perché tutto questo rende Foglio piccolo e veloce",
         body: [
           "Un'app Electron contiene una copia completa del browser Chromium, di solito ben oltre 100 MB prima ancora di fare qualcosa. Una suite Java o multipiattaforma porta con sé il proprio runtime e il proprio toolkit grafico. Foglio contiene solo il proprio codice e usa i framework già presenti su ogni Mac.",
-          "Il motore in Rust è compilato con l'ottimizzazione completa in fase di link e senza simboli di debug. Il risultato è un'app universale di circa 19 MB su disco, 7,5 MB come download compresso, che a riposo usa lo 0 % della CPU.",
+          "Il motore in Rust è compilato con l'ottimizzazione completa in fase di link e senza simboli di debug. Il risultato è un'app universale di circa 20 MB su disco, 7,7 MB come download compresso, che a riposo usa lo 0 % della CPU.",
         ],
       },
     ],
@@ -363,7 +363,7 @@ export const copyIt: SiteCopy = {
     steps: [
       {
         title: "Scarica l'immagine disco",
-        text: "Fai clic sul pulsante di download per scaricare `Foglio-1.0.dmg` (7,5 MB) dalla pagina delle release del progetto su GitHub.",
+        text: "Fai clic sul pulsante di download per scaricare `Foglio-1.0.dmg` (7,7 MB) dalla pagina delle release del progetto su GitHub.",
       },
       {
         title: "Trascina Foglio in Applicazioni",
@@ -389,7 +389,7 @@ export const copyIt: SiteCopy = {
     requirements: [
       "macOS 14 Sonoma o successivo",
       "Mac con Apple silicon o Intel (app universale)",
-      "Circa 19 MB di spazio su disco",
+      "Circa 20 MB di spazio su disco",
       "Nessun account e nessuna connessione a Internet necessari",
     ],
     sourceTitle: "Preferisci compilarlo da solo?",
@@ -429,7 +429,7 @@ export const copyIt: SiteCopy = {
     ],
     points: [
       { title: "Nativo", text: "Una vera app Mac in Swift e AppKit. Nessun browser nascosto dentro, nessun runtime da installare." },
-      { title: "Veloce e piccolo", text: "7,5 MB da scaricare, si apre in un quarto di secondo, circa 58 MB di memoria con un foglio aperto." },
+      { title: "Veloce e piccolo", text: "7,7 MB da scaricare, si apre in un quarto di secondo, circa 58 MB di memoria con un foglio aperto." },
       { title: "Compatibile", text: "Legge e scrive `.xlsx` standard e salva le formule nella forma di Excel, così il file si apre ovunque." },
     ],
   },

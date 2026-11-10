@@ -11,7 +11,7 @@ export const site = {
   repo: "https://github.com/GetFoglio/foglio",
   /** GitHub organization that owns the app repository. */
   org: "https://github.com/GetFoglio",
-  version: "1.0.2",
+  version: "1.0.3",
   released: "2026-11-09",
   minMacOS: "14",
   license: "MIT / Apache-2.0",
@@ -21,8 +21,8 @@ export const downloadUrl = `${site.repo}/releases/download/v${site.version}/Fogl
 export const releasesUrl = `${site.repo}/releases`;
 
 export const facts = {
-  dmgMB: 7.5, // universal DMG (Apple silicon + Intel)
-  appMB: 19, // installed .app, universal
+  dmgMB: 7.7, // universal DMG (Apple silicon + Intel)
+  appMB: 20, // installed .app, universal
   launchSeconds: 0.24, // launch to first frame, warm
   idleMemoryMB: 58, // empty workbook
   idleCPU: 0, // % CPU while idle
@@ -36,7 +36,7 @@ export const facts = {
   functions: 500, // ~500 Excel functions
   functionsTested: 195,
   functionsOk: 191,
-  uiTests: 69,
+  uiTests: 83,
   price: 0,
 } as const;
 
@@ -46,7 +46,7 @@ export const facts = {
  * from libreoffice.org. Used only for the size bar chart.
  */
 export const sizeComparisonMB = {
-  foglio: 7.5,
+  foglio: 7.7,
   libreoffice: 299,
   numbers: 661,
   excel: 1200,

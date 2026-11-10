@@ -19,7 +19,7 @@ export const comparison: ComparisonDictionary = {
   "Google account required": "Cuenta de Google obligatoria",
   "Size & speed": "Tamaño y velocidad",
   "Download size": "Tamaño de descarga",
-  "7.5 MB (universal)": "7,5 MB (universal)",
+  "7.7 MB (universal)": "7,7 MB (universal)",
   "1.2 GB (Excel alone, Mac App Store)": "1,2 GB (solo Excel, Mac App Store)",
   "661 MB (App Store listing)": "661 MB (según la App Store)",
   "≈ 300 MB (Apple silicon disk image)": "≈ 300 MB (imagen de disco para Apple silicon)",

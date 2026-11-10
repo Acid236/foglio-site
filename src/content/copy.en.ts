@@ -8,7 +8,7 @@ export const copyEn: SiteCopy = {
     navGuides: "Guides",
     navDownload: "Download",
     download: "Download for Mac",
-    downloadSub: "Free · macOS 14+ · Apple silicon & Intel · 7.5 MB",
+    downloadSub: "Free · macOS 14+ · Apple silicon & Intel · 7.7 MB",
     starOnGitHub: "Star on GitHub",
     readMore: "Read more",
     faqTitle: "Frequently asked questions",
@@ -52,7 +52,7 @@ export const copyEn: SiteCopy = {
     home: {
       title: "Foglio: Free Spreadsheet App for Mac, Excel-Compatible",
       description:
-        "Foglio is a free, open-source spreadsheet for macOS. Opens and saves Excel xlsx files, ~500 functions, native and tiny: a 7.5 MB download. No account.",
+        "Foglio is a free, open-source spreadsheet for macOS. Opens and saves Excel xlsx files, ~500 functions, native and tiny: a 7.7 MB download. No account.",
       ogTitle: "Foglio — a free, native, open-source spreadsheet for the Mac",
     },
     compare: {
@@ -63,12 +63,12 @@ export const copyEn: SiteCopy = {
     technology: {
       title: "How Foglio Is Built: Swift, AppKit and Rust | Foglio",
       description:
-        "Inside Foglio: a native Swift/AppKit app over a Rust engine (a patched IronCalc fork). Why it downloads at 7.5 MB, opens in 0.24 s and recalculates fast.",
+        "Inside Foglio: a native Swift/AppKit app over a Rust engine (a patched IronCalc fork). Why it downloads at 7.7 MB, opens in 0.24 s and recalculates fast.",
     },
     download: {
       title: "Download Foglio for Mac: Free Spreadsheet App | Foglio",
       description:
-        "Download Foglio 1.0, a free spreadsheet app for macOS 14 or later. Universal for Apple silicon and Intel, a 7.5 MB disk image. Install steps inside.",
+        "Download Foglio 1.0, a free spreadsheet app for macOS 14 or later. Universal for Apple silicon and Intel, a 7.7 MB disk image. Install steps inside.",
     },
     alternatives: {
       title: "Excel, Numbers and Google Sheets Alternatives | Foglio",
@@ -89,7 +89,7 @@ export const copyEn: SiteCopy = {
       "Foglio is a free spreadsheet app for Mac: small, fast and native, made for everyday spreadsheets. It opens and saves `.xlsx`, opens `.xls`, `.ods` and `.csv`, and speaks ~500 Excel functions. No subscription, no account, no ads.",
     badges: [
       "Free forever, MIT / Apache-2.0",
-      "7.5 MB download, launches in 0.24 s",
+      "7.7 MB download, launches in 0.24 s",
       "Native Swift/AppKit, no Electron",
       "No account, no telemetry",
     ],
@@ -128,7 +128,7 @@ export const copyEn: SiteCopy = {
       {
         icon: "feather",
         title: "Tiny and light",
-        text: "A 7.5 MB download, 19 MB installed, about 58 MB of memory with an empty sheet and 0 % CPU when idle. Your fans stay quiet.",
+        text: "A 7.7 MB download, 20 MB installed, about 58 MB of memory with an empty sheet and 0 % CPU when idle. Your fans stay quiet.",
       },
       {
         icon: "apple",
@@ -169,13 +169,13 @@ export const copyEn: SiteCopy = {
       "A Swift/AppKit interface with a custom grid, on top of a Rust calculation engine (a patched fork of IronCalc) linked in as a plain static library. Read [how Foglio is built](/technology/) and why that makes it small and fast.",
     formatsTitle: "Opens the files people send you",
     formatsText:
-      "`.xlsx` and `.xlsm` from Excel, old `.xls` and binary `.xlsb`, `.ods` from LibreOffice, and `.csv` / `.tsv` with automatic detection of encoding, delimiter and decimal separator. Saves `.xlsx`, exports CSV and PDF. See the guides on [opening xlsx files without Excel](/guides/open-xlsx-on-mac-without-excel/), [opening old .xls files](/guides/open-xls-on-mac/) and [opening CSV files on a Mac](/guides/open-csv-on-mac/).",
+      "`.xlsx` and `.xlsm` from Excel, old `.xls` and binary `.xlsb`, `.ods` from LibreOffice, and `.csv` / `.tsv` with automatic detection of encoding, delimiter and decimal separator. Saves `.xlsx` and `.xlsm` (macros kept, never run), CSV and TSV, and exports PDF. See the guides on [opening xlsx files without Excel](/guides/open-xlsx-on-mac-without-excel/), [opening old .xls files](/guides/open-xls-on-mac/) and [opening CSV files on a Mac](/guides/open-csv-on-mac/).",
     alternativesTitle: "Switching from something else?",
     alternativesText:
       "Honest notes for people coming from [Excel for Mac](/alternatives/excel-for-mac/), [Numbers](/alternatives/numbers/), [LibreOffice Calc](/alternatives/libreoffice/) or [Google Sheets](/alternatives/google-sheets/), including when you should keep using them. All of them are on the [alternatives page](/alternatives/).",
     ctaTitle: "Try it on your own spreadsheets",
     ctaText:
-      "It is a 7.5 MB download and it costs nothing. Foglio 1.0 is a first release, so keep backups of important files while you try it.",
+      "It is a 7.7 MB download and it costs nothing. Foglio 1.0 is a first release, so keep backups of important files while you try it.",
     faq: [
       {
         q: "Is Foglio really free?",
@@ -183,7 +183,7 @@ export const copyEn: SiteCopy = {
       },
       {
         q: "Can Foglio open and save Excel files?",
-        a: "Yes. It reads and writes `.xlsx` with formatting, charts, pictures, comments, data validation and conditional formatting. It also opens `.xls`, `.xlsb`, `.xlsm` and `.ods`, and CSV/TSV text files. It saves as `.xlsx`, and exports CSV and PDF.",
+        a: "Yes. It reads and writes `.xlsx` with formatting, charts, pictures, comments, data validation and conditional formatting. It also opens `.xls`, `.xlsb`, `.xlsm` and `.ods`, and CSV/TSV text files. It saves as `.xlsx` or `.xlsm` (keeping the macros, which it never runs), CSV or TSV, and exports PDF.",
       },
       {
         q: "Is it a full replacement for Microsoft Excel?",
@@ -207,7 +207,7 @@ export const copyEn: SiteCopy = {
       },
       {
         q: "Is Foglio finished?",
-        a: "Foglio 1.0 handles everyday spreadsheets end to end and is covered by 69 automated UI tests, but it is a first release. Keep backups of important files and report problems on [GitHub](https://github.com/GetFoglio/foglio/issues).",
+        a: "Foglio 1.0 handles everyday spreadsheets end to end and is covered by 83 automated UI tests, but it is a first release. Keep backups of important files and report problems on [GitHub](https://github.com/GetFoglio/foglio/issues).",
       },
     ],
   },
@@ -238,7 +238,7 @@ export const copyEn: SiteCopy = {
       {
         heading: "Where Foglio wins",
         body: [
-          "Foglio is the smallest app in this comparison by a wide margin: a 7.5 MB download against hundreds of megabytes or gigabytes for the desktop alternatives. It opens to a usable window in 0.24 s, uses about 58 MB of memory with an empty sheet and sits at 0 % CPU when idle.",
+          "Foglio is the smallest app in this comparison by a wide margin: a 7.7 MB download against hundreds of megabytes or gigabytes for the desktop alternatives. It opens to a usable window in 0.24 s, uses about 58 MB of memory with an empty sheet and sits at 0 % CPU when idle.",
           "It is free with no conditions, open source, and works completely offline with no account. Unlike Numbers it edits `.xlsx` files in place instead of converting them, and on an Italian, German, Spanish or French Mac you type formulas with the same localized function names Excel uses.",
         ],
       },
@@ -285,7 +285,7 @@ export const copyEn: SiteCopy = {
         heading: "The short version",
         body: [
           "Think of Foglio as two parts. The part you see (windows, menus, the grid of cells) is written with Apple's own tools, so it looks and behaves like every other Mac app. The part that does the maths (reading files, understanding formulas, recalculating) is a separate engine written in Rust, a language that produces very fast, compact programs.",
-          "The two parts talk through a small, plain interface. Nothing sits in between: no hidden browser, no virtual machine, no runtime to download. That is why the whole app is a 7.5 MB download, launches in 0.24 s and needs about 58 MB of memory with an empty sheet.",
+          "The two parts talk through a small, plain interface. Nothing sits in between: no hidden browser, no virtual machine, no runtime to download. That is why the whole app is a 7.7 MB download, launches in 0.24 s and needs about 58 MB of memory with an empty sheet.",
         ],
       },
       {
@@ -325,14 +325,14 @@ export const copyEn: SiteCopy = {
       {
         heading: "Tested with real keyboard and mouse events",
         body: [
-          "Foglio has 69 UI tests that drive the real app with real keyboard and mouse events: typing formulas, filling ranges, sorting, undoing, saving and reopening files. The file importers and the formula engine have their own Rust test suites, and a special mode re-checks every incremental recalculation against a full one.",
+          "Foglio has 83 UI tests that drive the real app with real keyboard and mouse events: typing formulas, filling ranges, sorting, undoing, saving and reopening files. The file importers and the formula engine have their own Rust test suites, and a special mode re-checks every incremental recalculation against a full one.",
         ],
       },
       {
         heading: "Why this makes Foglio small and fast",
         body: [
           "An Electron app carries a full copy of the Chromium browser, typically well over 100 MB before it does anything. A Java or cross-platform suite carries its runtime and its own UI toolkit. Foglio carries only its own code and uses the frameworks already on every Mac.",
-          "The Rust core is compiled with full link-time optimization and stripped of debug symbols. The result is a universal app of about 19 MB on disk, 7.5 MB as a compressed download, that idles at 0 % CPU.",
+          "The Rust core is compiled with full link-time optimization and stripped of debug symbols. The result is a universal app of about 20 MB on disk, 7.7 MB as a compressed download, that idles at 0 % CPU.",
         ],
       },
     ],
@@ -365,7 +365,7 @@ export const copyEn: SiteCopy = {
     steps: [
       {
         title: "Download the disk image",
-        text: "Click the download button to get `Foglio-1.0.dmg` (7.5 MB) from the project's GitHub releases.",
+        text: "Click the download button to get `Foglio-1.0.dmg` (7.7 MB) from the project's GitHub releases.",
       },
       {
         title: "Drag Foglio to Applications",
@@ -391,7 +391,7 @@ export const copyEn: SiteCopy = {
     requirements: [
       "macOS 14 Sonoma or later",
       "Apple silicon or Intel Mac (universal app)",
-      "About 19 MB of disk space",
+      "About 20 MB of disk space",
       "No account and no internet connection needed",
     ],
     sourceTitle: "Prefer to build it yourself?",
@@ -431,7 +431,7 @@ export const copyEn: SiteCopy = {
     ],
     points: [
       { title: "Native", text: "A real Mac app in Swift and AppKit. No browser engine inside, no runtime to install." },
-      { title: "Fast and small", text: "7.5 MB to download, open in a quarter of a second, about 58 MB of memory with a sheet open." },
+      { title: "Fast and small", text: "7.7 MB to download, open in a quarter of a second, about 58 MB of memory with a sheet open." },
       { title: "Compatible", text: "Reads and writes standard `.xlsx`, keeps your formulas in Excel's own form, so the file opens anywhere." },
     ],
   },
