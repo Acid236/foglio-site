@@ -77,10 +77,9 @@ export interface SiteCopy {
     navAlternatives: string;
     navGuides: string;
     navDownload: string;
-    navGitHub: string;
     download: string; // primary button, e.g. "Download for Mac"
     downloadSub: string; // under the button, e.g. "Free · macOS 14+ · Apple silicon & Intel · 7.5 MB"
-    viewSource: string; // secondary button
+    starOnGitHub: string; // secondary button, links to the repository: "Star on GitHub"
     readMore: string;
     faqTitle: string;
     updated: string; // "Updated" (followed by a date)

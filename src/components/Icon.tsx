@@ -1,6 +1,6 @@
 import type { Feature } from "@/content/types";
 
-type Name = Feature["icon"] | "check" | "cross" | "dash" | "download" | "github" | "arrow" | "menu";
+type Name = Feature["icon"] | "check" | "cross" | "dash" | "download" | "github" | "star" | "arrow" | "menu";
 
 const paths: Record<Name, string> = {
   bolt: "M13 2 4 14h7l-1 8 9-12h-7l1-8z",
@@ -21,6 +21,7 @@ const paths: Record<Name, string> = {
   download: "M12 3v12M7 10l5 5 5-5M5 21h14",
   github:
     "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7A3.4 3.4 0 0 0 9 18.1V22",
+  star: "m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z",
   arrow: "M5 12h14M13 6l6 6-6 6",
   menu: "M3 6h18M3 12h18M3 18h18",
 };

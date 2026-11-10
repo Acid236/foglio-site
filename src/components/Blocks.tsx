@@ -103,7 +103,8 @@ export function DownloadButtons({ locale, center }: { locale: Locale; center?: b
       </a>
       <a className="btn btn-ghost" href={site.repo} rel="noopener">
         <Icon name="github" size={18} />
-        {t.viewSource}
+        {t.starOnGitHub}
+        <Icon name="star" size={16} className="star-ico" />
       </a>
       <p className="cta-sub">{t.downloadSub}</p>
     </div>

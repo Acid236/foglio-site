@@ -38,8 +38,10 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
           </nav>
           <div className="header-actions">
             <LanguagePicker locale={locale} path={path} label={t.languageLabel} />
-            <a className="icon-link" href={site.repo} aria-label={t.navGitHub} rel="noopener">
-              <Icon name="github" size={20} />
+            <a className="star-link" href={site.repo} aria-label={t.starOnGitHub} title={t.starOnGitHub} rel="noopener">
+              <Icon name="github" size={17} />
+              <span>Star</span>
+              <Icon name="star" size={15} className="star-ico" />
             </a>
             <a className="btn btn-small" href={downloadUrl}>
               <Icon name="download" size={16} />
@@ -53,7 +55,7 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
                 {navLinks}
                 <Link href={href(locale, "/download/")}>{t.navDownload}</Link>
                 <a href={site.repo} rel="noopener">
-                  {t.navGitHub}
+                  {t.starOnGitHub} ★
                 </a>
               </nav>
             </details>
@@ -115,7 +117,7 @@ function Footer({ locale, path }: { locale: Locale; path: string }) {
     {
       title: t.openSource,
       links: [
-        { label: "GitHub", to: site.repo, ext: true },
+        { label: `${t.starOnGitHub} ★`, to: site.repo, ext: true },
         { label: t.releases, to: `${site.repo}/releases`, ext: true },
         { label: t.issues, to: `${site.repo}/issues`, ext: true },
         { label: t.navGuides, to: "/guides/" },

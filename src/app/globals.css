@@ -292,6 +292,32 @@ code {
   list-style: none;
 }
 
+.star-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.14s, background-color 0.14s;
+}
+
+.star-link:hover {
+  border-color: var(--green);
+  background: var(--paper-2);
+}
+
+.star-ico {
+  fill: #e3a008;
+  color: #e3a008;
+}
+
 .icon-link:hover,
 .nav-mobile summary:hover,
 .nav-mobile[open] summary,
@@ -1639,6 +1665,7 @@ pre.code code {
     margin-bottom: 64px;
   }
   .header-actions .btn-small,
+  .header-actions .star-link,
   .header-actions .icon-link {
     display: none;
   }
