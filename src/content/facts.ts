@@ -7,7 +7,7 @@
 export const site = {
   name: "Foglio",
   domain: "getfoglio.app",
-  url: "https://getfoglio.app",
+  url: "https://www.getfoglio.app",
   repo: "https://github.com/GetFoglio/foglio",
   /** GitHub organization that owns the app repository. */
   org: "https://github.com/GetFoglio",

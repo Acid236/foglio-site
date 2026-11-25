@@ -324,7 +324,7 @@ other than JSON-LD; ~11–14 KB gzip per page.
 
 ## After launch: checklist
 
-1. **Domain**: add `getfoglio.app` in Vercel ▸ Domains, redirect `www` to the apex, and check that
+1. **Domain**: add `getfoglio.app` in Vercel ▸ Domains, the apex redirects (308) to `www`, which is the canonical host (`site.url` in `src/content/facts.ts`; switched from the apex on 2026-11-25 to match Vercel and the URLs Google had already indexed), and check that
    `https://getfoglio.app/compare` redirects to `/compare/` (trailing slash) and that an unknown URL
    returns the 404 page with status 404.
 2. **Google Search Console**: add a *Domain* property for `getfoglio.app` (DNS TXT record). The
