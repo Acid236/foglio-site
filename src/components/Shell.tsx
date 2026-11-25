@@ -70,11 +70,13 @@ export function Shell({ locale, path, children }: { locale: Locale; path: string
 
 /** Language menu without JavaScript: a <details> dropdown of links to this page in every language. */
 function LanguagePicker({ locale, path, label }: { locale: Locale; path: string; label: string }) {
+  const code = localeInfo[locale].tag.slice(0, 2).toUpperCase();
   return (
     <details className="lang-picker">
-      <summary aria-label={`${label}: ${localeInfo[locale].name}`}>
+      {/* The accessible name starts with the visible code ("EN") so voice control matches it (WCAG 2.5.3). */}
+      <summary aria-label={`${code}, ${label}: ${localeInfo[locale].name}`}>
         <Icon name="globe" size={17} />
-        <span>{localeInfo[locale].tag.slice(0, 2).toUpperCase()}</span>
+        <span>{code}</span>
       </summary>
       <ul>
         {locales.map((l) => (

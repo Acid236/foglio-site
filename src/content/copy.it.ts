@@ -167,6 +167,7 @@ export const copyIt: SiteCopy = {
     techTitle: "Fatto come dovrebbe essere fatta un'app per Mac",
     techText:
       "Un'interfaccia Swift/AppKit con una griglia su misura, sopra un motore di calcolo in Rust (un fork migliorato di IronCalc) collegato come semplice libreria statica. Scopri [come è fatto Foglio](/technology/) e perché questo lo rende piccolo e veloce.",
+    techLink: "Scopri la tecnologia",
     formatsTitle: "Apre i file che ti mandano",
     formatsText:
       "`.xlsx` e `.xlsm` da Excel, i vecchi `.xls` e i binari `.xlsb`, `.ods` da LibreOffice, e `.csv` / `.tsv` con riconoscimento automatico di codifica, separatore e virgola decimale. Salva in `.xlsx` e `.xlsm` (le macro restano, ma non vengono mai eseguite), CSV e TSV, ed esporta in PDF. Leggi le guide su come [aprire file xlsx su Mac senza Excel](/guides/open-xlsx-on-mac-without-excel/), [aprire i vecchi file .xls](/guides/open-xls-on-mac/) e [aprire file CSV su Mac](/guides/open-csv-on-mac/).",

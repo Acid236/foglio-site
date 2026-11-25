@@ -189,7 +189,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               <Inline text={h.techText} locale={locale} />
             </p>
             <Link className="text-link" href={href(locale, "/technology/")}>
-              {c.ui.readMore} <Icon name="arrow" size={16} />
+              {h.techLink} <Icon name="arrow" size={16} />
             </Link>
           </div>
           <Architecture locale={locale} />

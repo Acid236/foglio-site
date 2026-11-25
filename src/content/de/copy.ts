@@ -167,6 +167,7 @@ export const copyDe: SiteCopy = {
     techTitle: "Gebaut, wie eine Mac-App gebaut sein sollte",
     techText:
       "Eine Swift/AppKit-Oberfläche mit eigenem Zellraster auf einer Rechen-Engine in Rust (einem gepatchten Fork von IronCalc), eingebunden als schlichte statische Bibliothek. Lies, [wie Foglio gebaut ist](/technology/) und warum es dadurch klein und schnell ist.",
+    techLink: "Mehr über die Technik",
     formatsTitle: "Öffnet die Dateien, die man dir schickt",
     formatsText:
       "`.xlsx` und `.xlsm` aus Excel, alte `.xls` und binäre `.xlsb`, `.ods` aus LibreOffice sowie `.csv` / `.tsv` mit automatischer Erkennung von Zeichensatz, Trennzeichen und Dezimaltrennzeichen. Speichert `.xlsx` und `.xlsm` (Makros bleiben erhalten, werden nie ausgeführt), CSV und TSV, exportiert PDF. Siehe die Anleitungen [xlsx-Datei ohne Excel öffnen](/guides/open-xlsx-on-mac-without-excel/), [alte .xls-Dateien öffnen](/guides/open-xls-on-mac/) und [CSV auf dem Mac öffnen](/guides/open-csv-on-mac/).",

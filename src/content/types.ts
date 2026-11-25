@@ -152,6 +152,7 @@ export interface SiteCopy {
     compareText: string;
     techTitle: string;
     techText: string;
+    techLink: string; // link under the tech section to /technology/, e.g. "Read about the technology"
     formatsTitle: string;
     formatsText: string;
     alternativesTitle: string;
