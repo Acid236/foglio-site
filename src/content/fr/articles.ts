@@ -454,9 +454,9 @@ export const guides: Article[] = [
   {
     slug: "open-xlsx-on-mac-without-excel",
     meta: {
-      title: "Ouvrir un fichier xlsx sur Mac sans Excel | Foglio",
+      title: "Comment ouvrir un fichier xlsx sur Mac (sans Excel) | Foglio",
       description:
-        "Quatre façons gratuites d'ouvrir et modifier un fichier Excel xlsx sur Mac sans Microsoft Excel : Coup d'œil, Numbers, une app gratuite ou un navigateur.",
+        "Comment ouvrir un fichier xlsx sur Mac sans Excel : Coup d'œil pour le lire, Numbers, une app gratuite ou un navigateur pour le modifier, avec les limites.",
     },
     h1: "Comment ouvrir un fichier xlsx sur Mac sans Excel",
     intro: [

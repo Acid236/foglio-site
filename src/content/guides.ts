@@ -935,9 +935,9 @@ const it: Article[] = [
   {
     slug: "excel-functions-italian-english",
     meta: {
-      title: "Funzioni di Excel in italiano e inglese: tabella | Foglio",
+      title: "Funzioni Excel in inglese e italiano: tabella | Foglio",
       description:
-        "CERCA.VERT è VLOOKUP, SOMMA è SUM, SE è IF: i nomi delle funzioni di Excel in italiano e inglese, e perché in Italia si usa il punto e virgola.",
+        "Funzioni Excel in inglese e in italiano: CERCA.VERT è VLOOKUP, SOMMA è SUM, SE è IF. Le più usate in tabella, con separatori e virgola decimale.",
     },
     h1: "Le funzioni di Excel in italiano e in inglese",
     intro: [

@@ -52,7 +52,7 @@ export const copyIt: SiteCopy = {
     home: {
       title: "Foglio: foglio di calcolo gratis per Mac, compatibile Excel",
       description:
-        "Foglio è un foglio di calcolo gratis per Mac, open source. Apre e salva file Excel xlsx, ~500 funzioni, nativo e leggero: 7,7 MB. Nessun account.",
+        "Foglio di calcolo gratis e open source per Mac: un foglio elettronico che apre e salva i file Excel xlsx, ~500 funzioni. Nativo, 7,7 MB, nessun account.",
       ogTitle: "Foglio — il foglio di calcolo gratuito, nativo e open source per Mac",
     },
     compare: {
