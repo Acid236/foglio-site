@@ -76,9 +76,9 @@ export const alternatives: Article[] = [
   {
     slug: "excel-for-mac",
     meta: {
-      title: "Alternative gratuite à Excel pour Mac (xlsx) | Foglio",
+      title: "Équivalent Excel sur Mac : alternative gratuite | Foglio",
       description:
-        "Une alternative gratuite à Excel pour Mac, sans abonnement Microsoft 365 ? Foglio, tableur open source, ouvre et enregistre les xlsx. Ce qu'il fait, ou pas.",
+        "Quel équivalent d'Excel sur Mac ? Choisir un tableur pour Mac (xlsx, formules, macros, hors ligne, prix) et ce que Foglio, gratuit, fait ou ne fait pas.",
     },
     h1: "Une alternative gratuite à Excel pour Mac qui ouvre vos fichiers xlsx",
     intro: [
@@ -123,6 +123,28 @@ export const alternatives: Article[] = [
         ],
       },
       {
+        heading: "Comment choisir un équivalent d'Excel sur Mac",
+        body: [
+          "Aucun tableur pour Mac ne fait gratuitement tout ce que fait Excel. Le bon choix dépend de ce que vous faites de vos fichiers, et cinq questions suffisent en général à trancher :",
+        ],
+        bullets: [
+          "**Devez-vous rendre des fichiers `.xlsx` ?** Si vos tableaux viennent d'utilisateurs d'Excel et doivent leur revenir, prenez une app qui modifie le `.xlsx` directement : Excel, Foglio et LibreOffice Calc le font. Numbers convertit le fichier en `.numbers` et le réexporte vers Excel quand vous le demandez ; Google Sheets le convertit, ou l'ouvre en mode d'édition Office dans Chrome.",
+          "**Vos formules passeront-elles ?** SOMME, SI, RECHERCHEV ou SOMME.SI.ENS existent partout. Les écarts portent sur les fonctions récentes : RECHERCHEX, FILTRE, LET et LAMBDA sont dans Excel, Foglio et Google Sheets, Numbers a LAMBDA avec des limites, et LibreOffice Calc n'a pas encore LAMBDA.",
+          "**Avez-vous des macros VBA ?** Seul Excel, dans sa version de bureau, exécute pleinement le VBA. LibreOffice Calc en prend en charge une partie, Google Sheets utilise Apps Script et Numbers n'a pas de macros. Foglio ouvre les fichiers `.xlsm` et garde leurs macros à l'enregistrement, mais ne les exécute pas.",
+          "**Travaillez-vous hors ligne ?** Excel, Numbers, LibreOffice Calc et Foglio fonctionnent sans connexion (Excel vérifie régulièrement l'abonnement en ligne). Google Sheets ne marche hors ligne qu'en partie, dans Chrome ou Edge avec une extension activée au préalable.",
+          "**Combien voulez-vous payer ?** Excel pour Mac demande un abonnement ou une licence (voir les prix plus haut) ; Excel pour le web est gratuit avec un compte Microsoft. Numbers, LibreOffice Calc, Google Sheets et Foglio sont gratuits ; Google Sheets exige un compte Google, alors que LibreOffice Calc et Foglio n'en demandent aucun. Vérifiez aussi votre version de macOS : la version actuelle de Numbers exige macOS 26, Foglio macOS 14 ou ultérieur.",
+        ],
+        sub: [
+          {
+            heading: "Où se situe Foglio",
+            body: [
+              "Foglio répond à un besoin précis : modifier des fichiers Excel sur Mac, hors ligne et gratuitement, avec les noms de fonctions et les raccourcis d'Excel, dans une app native de 7,7 Mo. Si vous avez besoin de macros, de tableaux croisés dynamiques ou de coédition, Excel, LibreOffice Calc ou Google Sheets vous serviront mieux, et le [comparatif Foglio, Excel, Numbers, LibreOffice et Google Sheets](/compare/) détaille chaque critère avec ses sources.",
+              "Si vous voulez seulement lire un fichier reçu par e-mail, vous n'avez peut-être besoin d'aucune nouvelle app : le guide [ouvrir un fichier xlsx sur Mac sans Excel](/guides/open-xlsx-on-mac-without-excel/) explique comment le consulter avec Coup d'œil, ou le modifier avec Numbers, une app gratuite ou un navigateur.",
+            ],
+          },
+        ],
+      },
+      {
         heading: "D'autres façons gratuites d'utiliser des fichiers Excel sur Mac",
         body: [
           "Foglio n'est pas la seule option, et selon vos besoins une autre pourrait mieux vous convenir :",
@@ -163,6 +185,14 @@ export const alternatives: Article[] = [
         a: "L'app de bureau exige un abonnement Microsoft 365 ou une licence Office pour créer et modifier des fichiers. Excel pour le web est gratuit avec un compte Microsoft. Parmi les alternatives de bureau gratuites qui ouvrent les fichiers Excel, il y a Foglio, LibreOffice Calc et Apple Numbers.",
       },
       {
+        q: "Quel est le meilleur équivalent d'Excel sur Mac ?",
+        a: "Cela dépend de votre usage. Pour modifier des fichiers `.xlsx` gratuitement et hors ligne avec les formules d'Excel : Foglio ou LibreOffice Calc. Pour des macros VBA ou des tableaux croisés dynamiques avancés, Excel reste la référence. Pour travailler à plusieurs en même temps : Google Sheets. Pour des documents soignés synchronisés avec l'iPhone et l'iPad : Numbers.",
+      },
+      {
+        q: "Un tableur gratuit pour Mac peut-il exécuter mes macros Excel ?",
+        a: "Seul Excel, dans sa version de bureau, exécute pleinement les macros VBA, et LibreOffice Calc en prend en charge une partie. Foglio ouvre les fichiers `.xlsm` et conserve leurs macros quand vous enregistrez en `.xlsm`, mais ne les exécute pas ; Numbers et Google Sheets n'exécutent pas le VBA.",
+      },
+      {
         q: "Un fichier enregistré par Foglio s'ouvrira-t-il correctement dans Excel ?",
         a: "Oui, Foglio enregistre des fichiers `.xlsx` standard, avec les formules dans la forme anglaise d'Excel. Mise en forme, graphiques, images, commentaires, validation et mise en forme conditionnelle sont réécrits. Ce que Foglio ne prend pas en charge, comme les formes ou les tableaux croisés dynamiques, n'est pas conservé : gardez l'original des fichiers complexes. Les macros sont conservées si vous enregistrez en `.xlsm`.",
       },
@@ -179,7 +209,7 @@ export const alternatives: Article[] = [
         a: "Oui. Les licences MIT et Apache-2.0 autorisent l'usage commercial gratuitement. Comme pour tout logiciel en version 1.0, gardez une copie de vos fichiers importants.",
       },
     ],
-    updated: UPDATED,
+    updated: "2026-11-26",
     cardTitle: "Alternative gratuite à Excel pour Mac",
     cardText: "Ouvrez et enregistrez des xlsx sans abonnement Microsoft 365, en sachant exactement ce à quoi vous renoncez.",
   },
