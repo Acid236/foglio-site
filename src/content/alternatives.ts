@@ -385,9 +385,9 @@ const it: Article[] = [
   {
     slug: "excel-for-mac",
     meta: {
-      title: "Alternativa gratuita a Excel per Mac | Foglio",
+      title: "Equivalente di Excel su Mac: alternativa gratis | Foglio",
       description:
-        "Cerchi un'alternativa gratuita a Excel per Mac, senza abbonamento a Microsoft 365? Foglio è open source, apre e salva i file xlsx. Cosa sa fare e cosa no.",
+        "Qual è l'equivalente di Excel su Mac? Foglio è gratis e open source, apre e salva i file xlsx e accetta le formule in italiano. Cosa sa fare e cosa no.",
     },
     h1: "Un'alternativa gratuita a Excel per Mac che apre i tuoi file xlsx",
     intro: [

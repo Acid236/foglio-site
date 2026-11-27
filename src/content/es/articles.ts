@@ -74,9 +74,9 @@ export const alternatives: Article[] = [
   {
     slug: "excel-for-mac",
     meta: {
-      title: "Alternativa gratis a Excel para Mac que abre xlsx | Foglio",
+      title: "Equivalente de Excel en Mac: alternativa gratis | Foglio",
       description:
-        "¿Buscas una alternativa gratis a Excel para Mac, sin pagar Microsoft 365? Foglio es de código abierto y abre y guarda xlsx. Qué puede hacer y qué no.",
+        "¿Cuál es el equivalente de Excel en Mac? Foglio es gratis y de código abierto: abre y guarda xlsx sin pagar Microsoft 365. Qué puede hacer y qué no.",
     },
     h1: "Una alternativa gratis a Excel para Mac que abre tus archivos xlsx",
     intro: [
